@@ -1,0 +1,149 @@
+/* 
+h1 = 60px, serif
+h2 = 48px, serif
+h3 = 30px, sans serif
+h4 = 24px, serif
+h5 = 18px, sans serif
+h6 = 16px, sans serif
+*/ 
+
+* {
+	box-sizing: border-box; 
+}
+
+body {
+	font-size: 16px;
+}
+h1{
+	font-size: 3.75em;
+	font-family: 'Cormorant Garamond', serif;
+	font-weight: 400;	
+	text-align: center;
+}
+h2 {
+	font-size: 3em;
+	font-family: 'Cormorant Garamond', serif;
+	font-weight: 300;
+	color: #3d7376;
+	text-align: center;
+}
+h3 {
+	font-size: 1.875em;
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+	text-align: center;
+	text-align: center;
+}
+h4 {
+	font-size: 1.5em;
+	font-family: 'Cormorant Garamond', serif;
+	font-weight: 300;
+	text-align: center;
+}
+h5 {
+	font-size: 1.125em;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	text-align: center;
+}
+h6, input {
+	font-size: 1em;
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	text-align: center;
+}
+.footnotes {
+	font-weight: 400i;
+}
+
+
+body.coachingIntroduction { 
+  display: grid;
+  grid-row-gap: 30px;
+  min-height: 100vh;
+  grid-template-rows: minmax(10vh, auto) minmax(90vh, auto) minmax(90vh, auto) minmax(75vh, auto) minmax(60vh, auto) minmax(60vh, auto) minmax(30vh, auto) minmax(20vh, auto);
+  /*grid-template-rows: minmax(100px, auto) minmax(100px, auto) minmax(100px, auto) minmax(100px, auto) minmax(100px, auto) minmax(100px, auto) minmax(100px, auto) 100px;*/
+  grid-template-areas: "a"
+                       "b"
+                       "c"
+                       "d"
+                       "e"
+                       "f"
+                       "g"		
+                       "h"
+}
+
+body.coachingIntroduction #header {
+	grid-area: a;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+header div nav ul {
+	display: flex;
+}
+
+header div nav ul a {
+	display: block;
+	padding: 10px 20px;
+}
+
+body.coachingIntroduction section#intro {
+	grid-area: b;	
+	background: url('../images/detroit_unsplash.jpg') no-repeat top center #fff;
+	background-size: cover;
+	min-height:500px;
+}
+
+.intro h1 {
+	padding-top: 5%;
+}
+
+.intro h5 {
+	padding-top: 1.5%;
+}
+
+body.coachingIntroduction section #d3 {
+	grid-area: c;
+	background-image: cover;
+	width: 50%;
+	align-content: center;
+}
+
+body.coachingIntroduction section #facts {
+	grid-area: d;
+	background: url("../images/lake michigan_unsplash.jpg");
+	background-size: cover;
+	min-height:500px;
+
+}
+
+body.coachingIntroduction section#whoToCoach {
+	grid-area: e;
+	background: url("../images/belle_isle_detroit_unsplash.jpg");
+	background-size: cover;
+	min-height:500px;		
+}
+
+body.coachingIntroduction section#coaches {
+	grid-area: f;
+	display: flex;
+}
+
+body.coachingIntroduction aside#form {
+	grid-area: g;
+	display: flex;
+}
+
+body.coachingIntroduction footer .footer {
+	grid-area: h;	
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+
+
+/*         mobile version         */
+@media screen and (max-width: 780px){

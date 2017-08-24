@@ -3,64 +3,140 @@
 <head>
   <meta charset="utf-8">
   <title>Kompas Small Business Coaching</title>
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"> 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
-
-    	<meta charset="utf-8">
-    	<meta name="description" content="The perfect personal assistant. Relaxr does your job for you so you can enjoy life as it is meant to be.">
-
-<!-- 		<title>Relaxr Landing Page</title>
-		<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,500,700,900,900" rel="stylesheet">
-		<! external CSS link -->
-<!-- 		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/style.css">
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-		<script type="text/javascript" src="js/script.js"></script> --> -->
-
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <meta charset="utf-8">
+  <meta name="description" content="Kompas Small Business Coaching. Description in one sentence here.">
 </head>
 
-<body>
+<body class="coachingIntroduction">
   <header>
-  	<div>
-  		<div>
-			<!-- <img src="images/kompas.svg">  			 -->
-  		</div>
+  	<div id="header">
+     <!-- <div class="logo"> -->
+      <a href="https://www.kompasstrategy.com" alt="Kompas Strategy Website Link">
+     <img class="headerLogo" src="images/kompas.svg" alt="Kompas Strategy Logo"></a>
+     <!-- </div> -->
   		<nav id="headerNav">
-  			<ul>
-  				<li href="#">About</li>
-  				<li href="#">Coaching</li>
-  				<li href="#">Contact</li>
+  			<ul class="headerLinks">
+          <li><a href="#">About</a></li> 
+          <li><a href="#">Coaching</a></li>
+  				<li><a href="#">Contact</a></li>
   			</ul>
   		</nav>
   	</div>
   </header>
 
   <section id="intro">
-  	<div>
-  		<img src="images/detroit_unsplash.jpg" alt="Image of Detroit Michigan">
-  		<h1>Small Business Coaching</h1>
-  		<hr size="0.5" width="20px" align="center">
-  		<p>We are matching emerging small businesses with established 
-business owners for free coaching sessions.</p>
+  	<div class="intro">
+  		<h1>Small Business Coaching</h1><br>
+  		<hr size="0.5" width="10%" align="center">
+  		<h5>We are matching emerging small businesses with established 
+business owners for free coaching sessions.</h5>
   	</div>	
   </section>
 
   <section id="d3">
-  	<div>
-  		<h1>Small Businesses in the U.S.</h1>
+  	<div class="d3">
+  		<h2>Small Businesses in the U.S.</h2>
+      <hr size="0.5" width="10%" align="center">
   		<img src="images/d3_map.png">
   	</div>
   </section>
 
-  <section></section>
+  <section id="facts">
+    <div class="facts">
+      <h3>We believe that small businesses like yours are the foundation of a thriving city. You are the source of job creation and economic development in your community.</h3>
+      <div>
+        <div>
+          <h1>28.8</h1>
+          <h4>million small businesses...</h4>
+          <h5>in the U.S. in 2013. Small businesses comprise 99.9% of all firms in the U.S. economy.</h5>
+        </div>
+        <div>
+          <h1>63.3%</h1>
+          <h4>of net new jobs...</h4>
+          <h5>from the third quarter of 1992 until the third quarter of 2013 were small businesses.</h5>
+        </div>
+        <div>
+          <h1>79.9%</h1>
+          <h4>of establishments survived...</h4>
+          <h5>of those who started in 2014 until 2015. About half of all establishments survive five years. About one-third of all establishments survive 10 years+.</h5>
+        </div>        
+      </div>
+      <blockquote class="footnotes">Source: https://www.sba.gov/sites/default/files/advocacy/SB_Profiles_2014-15_0.pdf</blockquote>
+    </div>
+  </section>
 
-  <section></section>
+  <section id="whoToCoach">
+    <h2>Who We Want To Coach</h2>
+    <hr size="0.5" width="10%" align="center">
+    <h5>
+    Our program is a fit for your if:<br>
+    You  are interested in growing your business and adding more employees.<br>
+    Your business is located in a community where annual family income is $35,000 or less.<br>
+    You are committed to keeping your business in a low-income area.<br>
+    You have five or fewer employees.<br>
+    Your business earns less than $40,000 in annual revenue.<br>
+    </h5>
+  </section>
 
-  <section></section>
+  <section id="coaches">
+    <div class="coaches">
+      <h2>Meet The Coaches</h2>
+      <div>
+        <h5>We will match you with the right coach depending on the type of challenge you are facing in your business.</h5>
+        <ul>
+          <li>Business Strategy &amp; Operations</li>
+          <li>Financials &amp; Bookkeeping</li>
+          <li>Human Resources</li>
+          <li>Lending</li>
+          <li>Marketing &amp; Sales</li>
+        </ul>
+      </div>
+    </div>
+  <div>Carousel</div>
+  </section>
 
-  <form></form>
+  <aside id="form">
+    <h2>Sign Up For An Application</h2>
+    <div>
+      <form method="POST">
+        <input required type="text" placeholder="Full Name" id="name" name="Name">
+        <input required type="challenge" placeholder="Challenge" id="challenge" name="Challenge">
+        <input required type="url" placeholder="Company Website" id="companyWebsite" name="Company Website">
+        <input required type="email" placeholder="Email" id="email" name="Email">
+        <input type="submit" placeholder="SUBMIT" id="submit" name="Submit">
+      </form>
+      <h6 class="footnotes">We have a limited number of time slots available and not all businesses that apply will qualify.</h6>
+    </div>
+  </aside>
 
-  <footer></footer>
+  <footer id="footer">
+    <div class="footer">
+      <div>Arrow Link To Top of Page</div>
+      <div>
+        <img class="headerLogo" src="images/kompas.svg" alt="Kompas Strategy Logo" href="https://www.kompasstrategy.com" alt="Kompas Strategy Website Link">
+        <h6>2017 Kompas. All rights reserved.</h6>
+      </div>
+      <div> 
+        <nav id="footerNav">
+          <ul class="footerLinks">
+            <li><a href="https://www.linkedin.com">LN Logo</a></li>
+            <li><a href="https://www.facebook.com">FB Logo</a></li>
+          </ul>
+        </nav>
+        <h6>
+            Questions? Reach out: <br>
+            info@kompasstrategy.com <br>
+            KompasStrategy.com
+        </h6>
+      </div>  
+    </div>    
+  </footer>
 </body>
 
 </html>
