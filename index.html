@@ -14,13 +14,14 @@
 </head>
 
 <body class="coachingIntroduction">
-  <header>
-  	<div id="header">
-     <!-- <div class="logo"> -->
-      <a href="https://www.kompasstrategy.com" alt="Kompas Strategy Website Link">
-     <img class="headerLogo" src="images/kompas.svg" alt="Kompas Strategy Logo"></a>
-     <!-- </div> -->
-  		<nav id="headerNav">
+  <header id="header">
+  	<div class="header">
+      <div class="logo">
+        <a href="https://www.kompasstrategy.com" alt="Kompas Strategy Website Link">
+        <img class="headerLogo" src="images/kLogo.svg" alt="Kompas Strategy Logo">
+        </a>
+      </div>
+  	  <nav id="headerNav">
   			<ul class="headerLinks">
           <li><a href="#">About</a></li> 
           <li><a href="#">Coaching</a></li>
@@ -37,11 +38,12 @@
   		<h5>We are matching emerging small businesses with established 
 business owners for free coaching sessions.</h5>
   	</div>	
+    <div class="whiteOverlay"></div>
   </section>
 
   <section id="d3">
   	<div class="d3">
-  		<h2>Small Businesses in the U.S.</h2>
+  		<h2>Small Businesses in the U.S.</h2><br>
       <hr size="0.5" width="10%" align="center">
   		<img src="images/d3_map.png">
   	</div>
@@ -50,7 +52,7 @@ business owners for free coaching sessions.</h5>
   <section id="facts">
     <div class="facts">
       <h3>We believe that small businesses like yours are the foundation of a thriving city. You are the source of job creation and economic development in your community.</h3>
-      <div>
+      <div class=threeColumns>
         <div>
           <h1>28.8</h1>
           <h4>million small businesses...</h4>
@@ -67,13 +69,13 @@ business owners for free coaching sessions.</h5>
           <h5>of those who started in 2014 until 2015. About half of all establishments survive five years. About one-third of all establishments survive 10 years+.</h5>
         </div>        
       </div>
-      <blockquote class="footnotes">Source: https://www.sba.gov/sites/default/files/advocacy/SB_Profiles_2014-15_0.pdf</blockquote>
+      <h6 class="footnotes">Source: https://www.sba.gov/sites/default/files/advocacy/SB_Profiles_2014-15_0.pdf</h6>
     </div>
   </section>
 
   <section id="whoToCoach">
     <h2>Who We Want To Coach</h2>
-    <hr size="0.5" width="10%" align="center">
+    <hr size="0.5" width="10%" align="center"><br>
     <h5>
     Our program is a fit for your if:<br>
     You  are interested in growing your business and adding more employees.<br>
@@ -107,7 +109,7 @@ business owners for free coaching sessions.</h5>
       <form method="POST">
         <input required type="text" placeholder="Full Name" id="name" name="Name">
         <input required type="challenge" placeholder="Challenge" id="challenge" name="Challenge">
-        <input required type="url" placeholder="Company Website" id="companyWebsite" name="Company Website">
+        <input type="url" placeholder="Company Website" id="companyWebsite" name="Company Website">
         <input required type="email" placeholder="Email" id="email" name="Email">
         <input type="submit" placeholder="SUBMIT" id="submit" name="Submit">
       </form>
@@ -118,11 +120,15 @@ business owners for free coaching sessions.</h5>
   <footer id="footer">
     <div class="footer">
       <div>Arrow Link To Top of Page</div>
-      <div>
-        <img class="headerLogo" src="images/kompas.svg" alt="Kompas Strategy Logo" href="https://www.kompasstrategy.com" alt="Kompas Strategy Website Link">
+      <div class="kompasFooter">
+        <div class="logo">
+          <a href="https://www.kompasstrategy.com" alt="Kompas Strategy Website Link">
+          <img class="footerLogo" src="images/kLogo.svg" alt="Kompas Strategy Logo">
+          </a>
+        </div>
         <h6>2017 Kompas. All rights reserved.</h6>
       </div>
-      <div> 
+      <div class="contact"> 
         <nav id="footerNav">
           <ul class="footerLinks">
             <li><a href="https://www.linkedin.com">LN Logo</a></li>
