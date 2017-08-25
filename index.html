@@ -134,11 +134,19 @@ business owners for free coaching sessions.</h5>
     <h2>Sign Up For An Application</h2>
     <div class="form">
       <form method="POST">
-        <input required type="text" placeholder="Full Name" id="name" name="Name" class="main">
-        <input required type="text" placeholder="Challenge" id="challenge" name="Challenge" class="main">
-        <input type="text" placeholder="Company Website" id="companyWebsite" name="Company Website" class="main">
-        <input required type="email" placeholder="Email" id="email" name="Email" class="main">
-        <input type="submit" placeholder="SUBMIT" id="submit" name="Submit">
+        <input required type="text" placeholder="Full Name" name="Name" id="name" class="main">
+        <input type="text" placeholder="Company Website" name="Company Website" id="companyWebsite" class="main">
+        <input required type="email" placeholder="Email" name="Email" id="email" class="main">
+        <!-- <input required type="text" placeholder="Challenge" name="Challenge" id="challenge" class="main"> -->
+        <!-- https://codepen.io/ericrasch/pen/zjDBx -->
+        <select name="Challenges" class="challengesList">
+          <option value="Strategy" name="Strategy">Business Strategy &amp; Operations</option>
+          <option value="Finance">Financials &amp; Bookkeeping</option>
+          <option value="Human Resources">Human Resources</option>
+          <option value="Lending">Lending</option>
+          <option value="Marketing">Marketing</option>
+        </select>
+        <input type="submit" placeholder="SUBMIT" name="Submit" id="submit">
       </form>
       <h6 class="footnotes">We have a limited number of time slots available and not all businesses that apply will qualify.</h6>
     </div>
