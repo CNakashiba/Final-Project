@@ -78,6 +78,7 @@ body.coachingIntroduction {
                        "h"
 }
 
+/* Grid A - Header */
 body.coachingIntroduction #header .header {
 	grid-area: a;
 	display: flex;
@@ -102,6 +103,7 @@ header div nav ul a {
 	padding: 10px 20px;
 }
 
+/* Grid B - Intro */
 #intro {
 	grid-area: b;	
 	background: url('../images/detroit_unsplash.jpg') no-repeat top center #fff;
@@ -126,6 +128,8 @@ header div nav ul a {
 	background: rgba(white, 0.9);
 }*/
 
+
+/* Grid C - D3 */
 #d3 {
 	grid-area: c;
 	/*background-image: cover;*/
@@ -137,6 +141,7 @@ header div nav ul a {
 	padding-top: 8vh;
 }
 
+/* Grid D - FACTS */
 #facts {
 	grid-area: d;
 	background: url("../images/lake michigan_unsplash_cut.jpg");
@@ -197,6 +202,7 @@ header div nav ul a {
 	color: white;
 }
 
+/* Grid E - ENROLL */
 #whoToCoach {
 	grid-area: e;
 	background: url("../images/belle_isle_detroit_unsplash.jpg");
@@ -220,6 +226,7 @@ header div nav ul a {
 	background-color: rgba(60, 115, 118, 0.35);
 }*/
 
+/* Grid F - COACHES */
 #coaches {
 	grid-area: f;
 	display: flex;
@@ -261,6 +268,7 @@ header div nav ul a {
 	padding-left: 15vh;
 }
 
+/* Grid G - FORM */
 #form {
 	grid-area: g;
 	display: flex;
@@ -316,6 +324,7 @@ aside h6 {
 	text-align: left; 
 }
 
+/* Grid H - FOOTER */
 footer .footer {
 	grid-area: h;	
 	display: flex;
