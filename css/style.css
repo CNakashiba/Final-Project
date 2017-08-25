@@ -325,6 +325,10 @@ aside h6 {
 }
 
 /* Grid H - FOOTER */
+footer {
+	background: rgb(0,0,0);
+}
+
 footer .footer {
 	grid-area: h;	
 	display: flex;
@@ -347,6 +351,7 @@ footer img {
 
 .contact {
 	align-items: center;
+	color: white;
 }
 
 .footerLinks {
