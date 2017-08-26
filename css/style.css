@@ -85,9 +85,9 @@ body.coachingIntroduction #header .header {
 	align-items: center;
 	justify-content: space-between;
 	padding: 10px;
-	position: fixed;
 	background: white;
 	width: 100%;
+	position: fixed;
 }
 
 .headerLogo {
@@ -101,6 +101,7 @@ header div nav ul {
 header div nav ul a {
 	display: block;
 	padding: 10px 20px;
+	color: #3d7376;
 }
 
 /* Grid B - Intro */
@@ -146,7 +147,8 @@ header div nav ul a {
 	width: 20vh;
 	border-style: none none solid none;
 	border-width: 1px;
-	border-color: rgb(130, 10, 10);
+	border-color: black;
+	/*border-color: rgb(130, 10, 10);*/
 	position: absolute;
 }
 
@@ -178,7 +180,6 @@ header div nav ul a {
 	border-style: none none solid none;
 	border-width: 1px;
 	border-color: black;
-	/*position: absolute;*/
 }
 
 .d3 img {
@@ -206,6 +207,7 @@ header div nav ul a {
 .facts h3 {
 	width: 120vh;
 	padding: 5vh 0 20vh 0;
+	color: #3d7376;	
 }
 
 .facts .factsOverlay {
@@ -254,23 +256,41 @@ header div nav ul a {
 	background: url("../images/belle_isle_detroit_unsplash.jpg");
 	background-size: cover;
 	color: white;
-	padding: 30vh;
-	line-height: 120%;
-	/*min-height:500px;		*/
+	padding: 19vh 0;
+/*	line-height: 120%;
+*/	/*min-height:500px;		*/
 }
 
-#whoToCoach h2 {
-	color: white;
-	padding-bottom: 5vh;
-}
-
-/*#whoToCoach .whoOverlay {
+#whoToCoach .whoOverlay {
 	width: 100%;
 	height: 100%;
 	top: 0;
 	left: 0;
-	background-color: rgba(60, 115, 118, 0.35);
-}*/
+	background-color: rgba(60, 115, 118, .6);
+}
+
+.whoOverlay h2 {
+	color: white;
+	padding: 5vh 0;
+}
+
+.whoLine {
+	margin-left: 45%;
+	/*height: 1vh;*/
+	/*padding-top: 2vh;*/
+	width: 20vh;
+	border-style: none none solid none;
+	border-width: 1px;
+	border-color: white;
+}
+
+.whoOverlay h5 {
+	color: white;
+	padding-top: 4vh;
+	line-height: 1.5;
+}
+
+
 
 /* Grid F - COACHES */
 #coaches {
@@ -285,6 +305,15 @@ header div nav ul a {
 #coaches h2 {
 	color: white;
 	padding-bottom: 2vh;
+}
+
+.coachesLine {
+	margin-left: 45%;
+	height: 3vh;
+	width: 20vh;
+	border-style: none none solid none;
+	border-width: 1px;
+	border-color: white;
 }
 
 .coaches {
