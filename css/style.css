@@ -101,7 +101,9 @@ header div nav ul {
 header div nav ul a {
 	display: block;
 	padding: 10px 20px;
-	color: #3d7376;
+	/*color: #3d7376;*/
+	color: black;
+	font-family: 'Source Sans Pro', sans-serif;
 }
 
 /* Grid B - Intro */
@@ -460,7 +462,7 @@ footer img {
 }
 
 .footerLogo {
-	width: 15vh;
+	width: 5vh;
 }
 
 .contact {
