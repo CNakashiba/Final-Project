@@ -22,7 +22,7 @@
   <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
   <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
@@ -52,19 +52,22 @@
   </header>
 
   <section id="intro">
-  	<div class="intro">
-  		<h1>Small Business Coaching</h1><br>
-  		<hr size="0.5" width="10%" align="center">
-  		<h5>We are matching emerging small businesses with established 
-business owners for free coaching sessions.</h5>
-  	</div>	
-    <div class="introOverlay"></div>
+  	<div class="clearOverlay"></div>
+    <!-- <div class="introOverlay"> -->
+      <div class="intro">
+    		<h1>Small Business Coaching</h1><br>
+    		<!-- <hr size="0.5" width="10%" align="center"> -->
+        <div class="introLine"></div>
+    		<h5>We are matching emerging small businesses with established business owners for free coaching sessions.</h5>
+    	</div>	
+    <!-- </div> -->
   </section>
 
   <section id="d3">
   	<div class="d3">
   		<h2>Small Businesses in the U.S.</h2><br>
-      <hr size="0.5" width="10%" align="center">
+      <!-- <hr size="0.5" width="10%" align="center"> -->
+      <div class="d3Line"></div>      
   		<img src="images/d3_map.png">
   	</div>
   </section>
@@ -111,7 +114,7 @@ business owners for free coaching sessions.</h5>
   </section>
 
   <section id="coaches">
-    <h2>Meet The Coaches</h2>
+    <h2>Meet Some Of The Coaches</h2>
     <hr size="0.5" width="10%" align="center">
     <div class="coaches">
       <div class="challenges">
@@ -154,11 +157,15 @@ business owners for free coaching sessions.</h5>
 
   <footer id="footer">
     <div class="footer">
-      <div><img src="images/arrow.svg"></div>
+      <div id="arrow">
+        <a href="#" alt="Click arrow to go to the top of the page.">
+        <img class="arrow" src="images/arrow.svg" alt="Arrow pointing up.">
+        </a>
+      </div>
       <div class="kompasFooter">
         <div class="logo">
           <a href="https://www.kompasstrategy.com" alt="Kompas Strategy Website Link">
-          <img class="footerLogo" src="images/kLogo.svg" alt="Kompas Strategy Logo">
+          <img class="headerLogo" src="images/kLogo.svg" alt="Kompas Strategy Logo">
           </a>
         </div>
         <h6>2017 Kompas. All rights reserved.</h6>

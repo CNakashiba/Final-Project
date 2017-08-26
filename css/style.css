@@ -108,25 +108,55 @@ header div nav ul a {
 	grid-area: b;	
 	background: url('../images/detroit_unsplash.jpg') no-repeat top center #fff;
 	background-size: cover;
+/*	display: flex;
+	flex-direction: column;	*/
 	/*min-height:500px;*/
 	/*min-height: 90vh;*/
 }
 
-.intro h1 {
-	padding-top: 5%;
-}
-
-.intro h5 {
-	padding-top: 1.5%;
-	font-weight: 400;
+#intro .clearOverlay {
+	height: 200px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	left: 0;
+	background: rgba(255, 255, 255, .6);
+	position: absolute;
+	top: 35vh;
 }
 
 /*#intro .introOverlay {
 	height: 200px;
 	width: 100%;
+	top: 0;
 	left: 0;
-	background: rgba(white, 0.9);
+	left: 0;
+	background: rgba(255, 255, 255, 0.7);
 }*/
+
+.intro h1 {
+	margin-top: 32vh;
+	position: absolute;
+	left: 42vh;
+}
+
+.introLine {
+	margin-left: 45%;
+	height: 43vh;
+	width: 20vh;
+	border-style: none none solid none;
+	border-width: 1px;
+	border-color: rgb(130, 10, 10);
+	position: absolute;
+}
+
+.intro h5 {
+	margin-top: 47vh;
+	/*padding-top: 4vh;*/
+	font-weight: 400;
+	position: absolute;
+	left: 35vh;	
+}
 
 
 /* Grid C - D3 */
@@ -138,14 +168,30 @@ header div nav ul a {
 }
 
 .d3 h2 {
-	padding-top: 8vh;
+	padding-top: 10vh;
 }
+
+.d3Line {
+	margin-left: 45%;
+	height: 3vh;
+	width: 20vh;
+	border-style: none none solid none;
+	border-width: 1px;
+	border-color: black;
+	/*position: absolute;*/
+}
+
+.d3 img {
+	padding: 5vh 0 0 35vh;
+}
+
 
 /* Grid D - FACTS */
 #facts {
 	grid-area: d;
 	background: url("../images/lake michigan_unsplash_cut.jpg");
 	background-size: cover;
+	border: none;
 /*	position: relative;
 */	/*min-height:500px;*/
 }
@@ -154,12 +200,12 @@ header div nav ul a {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 8vh 5vh 0vh 5vh;
+	padding: 10vh 0 0 0;
 }
 
 .facts h3 {
 	width: 120vh;
-	padding-bottom: 6vh;
+	padding: 5vh 0 20vh 0;
 }
 
 .facts .factsOverlay {
@@ -173,7 +219,7 @@ header div nav ul a {
 .facts .factsOverlay .threeColumns {
 	display: flex;
 	color: white;
-	padding-top: 5vh;
+	padding-top: 10vh;
 }
 
 .facts .factsOverlay .threeColumns div{
@@ -313,8 +359,9 @@ select.challengesList {
 /*   -webkit-padding-end: 10vh;
    -webkit-padding-start: 5vh;*/
    -webkit-user-select: none;
-/*   background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
-   background-position: 97% center;*/
+	/*background: url('../images/detroit_unsplash.jpg') no-repeat top center #fff;*/
+   background: url(../images/down_arrow.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+   background-position: 97% center;
    /*background-repeat: no-repeat;*/
    background: rgb(84, 84, 84);
    border: .25px solid white;
@@ -360,9 +407,24 @@ footer .footer {
 	padding-top: 5vh;
 }
 
+footer .footer div {
+	flex: 1;
+	border-style: none solid none none;
+	border-width: .25px;
+	border-color: white;
+}
+
 footer img {
 	width: 6vh;
 }
+
+/*.footerHr {
+	-moz-transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+}*/
 
 .kompasFooter {
 	align-items: center;
