@@ -3,8 +3,8 @@ h1 = 60px, serif
 h2 = 48px, serif
 h3 = 30px, sans serif
 h4 = 24px, serif 
-h5 = 16px, sans serif
-h6 = 12px, sans serif
+p = 16px, sans serif
+small = 12px, sans serif
 */ 
 
 * {
@@ -41,21 +41,21 @@ h4 {
 	font-weight: 300;
 	text-align: center;
 }
-h5 {
+p {
 	font-size: 1em;
 	font-family: 'Source Sans Pro', sans-serif;
 	/*font-family: 'Lato', sans-serif;*/
 	font-weight: 300;
 	text-align: center;
 }
-h6, input {
+small, input {
 	font-size: 0.75em;
 	font-family: 'Source Sans Pro', sans-serif;
 	/*font-family: 'Lato', sans-serif;*/
 	font-weight: 400i;
 	text-align: center;
 }
-h6.footnotes {
+small.footnotes {
 	font-weight: 400i;
 	font-style: italic;
 }
@@ -67,7 +67,7 @@ a {
 body.coachingIntroduction { 
   display: grid;
   min-height: 100vh;
-  grid-template-rows: minmax(9vh, auto) minmax(91vh, auto) minmax(91vh, auto) minmax(91vh, auto) minmax(91vh, auto) minmax(91vh, auto) minmax(51vh, auto) minmax(20vh, auto);
+  grid-template-rows: minmax(10vh, auto) minmax(90vh, auto) minmax(90vh, auto) minmax(90vh, auto) minmax(90vh, auto) minmax(90vh, auto) minmax(50vh, auto) minmax(20vh, auto);
   grid-template-areas: "a"
                        "b"
                        "c"
@@ -91,7 +91,7 @@ body.coachingIntroduction #header .header {
 }
 
 .headerLogo {
-	width: 20vh;
+	width: 16vh;
 }
 
 header div nav ul {
@@ -111,8 +111,10 @@ header div nav ul a {
 	grid-area: b;	
 	background: url('../images/detroit_unsplash.jpg') no-repeat top center #fff;
 	background-size: cover;
-/*	display: flex;
-	flex-direction: column;	*/
+	display: flex;
+	flex-direction: column;	
+	align-content: center;
+	position: relative;
 	/*min-height:500px;*/
 	/*min-height: 90vh;*/
 }
@@ -122,39 +124,29 @@ header div nav ul a {
 	width: 100%;
 	top: 0;
 	left: 0;
-	left: 0;
-	background: rgba(255, 255, 255, .6);
+	background: rgba(255, 255, 255, .7);
 	position: absolute;
-	top: 35vh;
+	top: 26vh;
 }
 
-/*#intro .introOverlay {
-	height: 200px;
-	width: 100%;
-	top: 0;
-	left: 0;
-	left: 0;
-	background: rgba(255, 255, 255, 0.7);
-}*/
-
 .intro h1 {
-	margin-top: 32vh;
 	position: absolute;
-	left: 42vh;
+	top: 30vh;
+	left: 25%
 }
 
 .introLine {
-	margin-left: 45%;
+	/*margin-left: 45%;*/
+	position: absolute;
+	left: 45%;
 	height: 43vh;
 	width: 20vh;
 	border-style: none none solid none;
 	border-width: 1px;
 	border-color: black;
-	/*border-color: rgb(130, 10, 10);*/
-	position: absolute;
 }
 
-.intro h5 {
+.intro p {
 	margin-top: 47vh;
 	/*padding-top: 4vh;*/
 	font-weight: 400;
@@ -208,7 +200,7 @@ header div nav ul a {
 
 .facts h3 {
 	width: 120vh;
-	padding: 5vh 0 20vh 0;
+	padding: 5vh 0 10vh 0;
 	color: #3d7376;	
 }
 
@@ -218,6 +210,9 @@ header div nav ul a {
 	top: 0;
 	left: 0;
 	background-color: rgba(21, 40, 54, .7);
+	padding-bottom: 10vh;
+	display: flex;
+	flex-direction: column;
 }
 
 .facts .factsOverlay .threeColumns {
@@ -243,12 +238,12 @@ header div nav ul a {
 	padding-bottom: 2vh;
 }
 
-.facts .factsOverlay .threeColumns div h5{
+.facts .factsOverlay .threeColumns div p{
 	line-height: 120%;
 }
 
 .facts .factsOverlay .footnotes {
-	padding: 10vh 0;
+	padding-top: 10vh;
 	color: white;
 }
 
@@ -286,9 +281,9 @@ header div nav ul a {
 	border-color: white;
 }
 
-.whoOverlay h5 {
+.whoOverlay p {
 	color: white;
-	padding-top: 4vh;
+	padding: 4vh 20vh 0 20vh;
 	line-height: 1.5;
 }
 
@@ -325,7 +320,7 @@ header div nav ul a {
 	flex: 1;
 }
 
-.challenges h5 {
+.challenges p {
 	width: 90vh;
 	text-align: left;
 	padding-bottom: 3vh; 
