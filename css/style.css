@@ -27,14 +27,6 @@ h2 {
 	color: #3d7376;
 	text-align: center;
 }
-h3 {
-	font-size: 1.875em;
-	font-family: 'Source Sans Pro', sans-serif;
-	/*font-family: 'Lato', sans-serif;*/
-	font-weight: 300;
-	text-align: center;
-	text-align: center;
-}
 h4 {
 	font-size: 1.5em;
 	font-family: 'Cormorant Garamond', serif;
@@ -139,7 +131,7 @@ header div nav ul a {
 	/*margin-left: 45%;*/
 	position: absolute;
 	left: 45%;
-	height: 43vh;
+	height: 42vh;
 	width: 20vh;
 	border-style: none none solid none;
 	border-width: 1px;
@@ -198,7 +190,13 @@ header div nav ul a {
 	padding: 10vh 0 0 0;
 }
 
-.facts h3 {
+.facts p.largerP {
+	font-size: 1.875em;
+	font-family: 'Source Sans Pro', sans-serif;
+	/*font-family: 'Lato', sans-serif;*/
+	font-weight: 300;
+	text-align: center;
+	line-height: 1.2;
 	width: 120vh;
 	padding: 5vh 0 10vh 0;
 	color: #3d7376;	
@@ -229,6 +227,10 @@ header div nav ul a {
 	border-color: white;
 }
 
+.facts .factsOverlay .threeColumns div.noBorder {
+	border-style: none none none none;
+}
+
 .facts .factsOverlay .threeColumns div h1{
 	line-height: 150%;
 	font-weight: 300;
@@ -247,10 +249,12 @@ header div nav ul a {
 	color: white;
 }
 
+
 /* Grid E - ENROLL */
 #whoToCoach {
 	grid-area: e;
-	background: url("../images/belle_isle_detroit_unsplash.jpg");
+	/*background: url("../images/belle_isle_detroit_unsplash.jpg");*/
+	background: url("../images/belle_isle_detroit_unsplash_crop_2000px.jpg");
 	background-size: cover;
 	color: white;
 	padding: 19vh 0;
@@ -258,17 +262,17 @@ header div nav ul a {
 */	/*min-height:500px;		*/
 }
 
-#whoToCoach .whoOverlay {
+/*#whoToCoach .whoOverlay {
 	width: 100%;
 	height: 100%;
 	top: 0;
 	left: 0;
-	background-color: rgba(60, 115, 118, .6);
-}
+	background-color: rgba(60, 115, 118, .1);
+}*/
 
 .whoOverlay h2 {
 	color: white;
-	padding: 5vh 0;
+	padding: 15vh 0 5vh 0;
 }
 
 .whoLine {
@@ -340,6 +344,7 @@ header div nav ul a {
 	padding-left: 15vh;
 }
 
+
 /* Grid G - FORM */
 #form {
 	grid-area: g;
@@ -378,7 +383,7 @@ input, select {
 	width: 75vh;
 }
 
-select.challengesList {
+select.challengesList, option {
    -webkit-appearance: button;
    -webkit-border-radius: 0;
    /*-webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);*/
@@ -415,10 +420,11 @@ input::placeholder {
 	font-weight: 300;
 }
 
-aside h6 {
+aside small {
 	padding: 2vh 0 0 15vh;
 	text-align: left; 
 }
+
 
 /* Grid H - FOOTER */
 footer {
@@ -431,6 +437,7 @@ footer .footer {
 	align-items: center;
 	justify-content: space-around;
 	padding-top: 5vh;
+	padding-top: 5vh;
 }
 
 footer .footer div {
@@ -440,17 +447,13 @@ footer .footer div {
 	border-color: white;
 }
 
-footer img {
-	width: 6vh;
+footer .footer div.noBorder {
+	border-style: none none none none;
 }
 
-/*.footerHr {
-	-moz-transform: rotate(90deg);
-	-webkit-transform: rotate(90deg);
-	-o-transform: rotate(90deg);
-	-ms-transform: rotate(90deg);
-	transform: rotate(90deg);
-}*/
+footer #arrow img {
+	width: 6vh;
+}
 
 .kompasFooter {
 	align-items: center;
@@ -461,13 +464,22 @@ footer img {
 }
 
 .contact {
-	align-items: center;
+	/*align-items: center;*/
 	color: white;
 }
 
 .footerLinks {
 	display: flex;
+	justify-content: center;
+	/*align-items: center;	*/
 }
+
+.contact img {
+	width: 8vh;
+	padding: 0 2vh;
+}
+
+
 
 /*         mobile version         
 @media screen and (max-width: 780px){
