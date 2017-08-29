@@ -58,7 +58,7 @@ a.active {
 }
 
 
-/* BODY */
+/* ========================= BODY ========================= */
 body.coachingIntroduction { 
   display: grid;
   /*min-height: 100vh;*/
@@ -73,7 +73,8 @@ body.coachingIntroduction {
                        "h"
 }
 
-/* Grid A - Header */
+
+/* =================== Grid A - HEADER =================== */
 body.coachingIntroduction #header {
 	height: 1em;
 }
@@ -113,13 +114,13 @@ header div nav ul a {
 }
 
 
-
-/* Grid B - Intro */
+/* =================== Grid B - INTRO =================== */
 #intro {
 	grid-area: b;	
 	background: url('../images/detroit_unsplash_2000.jpg') no-repeat top center #fff;
 	background-size: cover;
 	display: flex;
+	width: 100%;
 	flex-direction: column;	
 	align-content: center;
 	position: relative;
@@ -144,7 +145,6 @@ header div nav ul a {
 }
 
 .introLine {
-	/*margin-left: 45%;*/
 	position: absolute;
 	left: 45%;
 	height: 42vh;
@@ -156,17 +156,15 @@ header div nav ul a {
 
 .intro p {
 	margin-top: 47vh;
-	/*padding-top: 4vh;*/
 	font-weight: 400;
 	position: absolute;
 	left: 35vh;	
 }
 
 
-/* Grid C - D3 */
+/* =================== Grid C - D3 =================== */
 #d3 {
 	grid-area: c;
-	/*background-image: cover;*/
 	width: 100%;
 	align-content: center;
 }
@@ -189,14 +187,14 @@ header div nav ul a {
 }
 
 
-/* Grid D - FACTS */
+/* =================== Grid D - FACTS =================== */
 #facts {
 	grid-area: d;
 	background: url("../images/lake michigan_unsplash_cut.jpg");
 	background-size: cover;
+	width: 100%;
 	border: none;
-/*	position: relative;
-*/	/*min-height:500px;*/
+	/*min-height:500px;*/
 }
 
 .facts {
@@ -209,7 +207,6 @@ header div nav ul a {
 .facts p.largerP {
 	font-size: 1.875em;
 	font-family: 'Source Sans Pro', sans-serif;
-	/*font-family: 'Lato', sans-serif;*/
 	font-weight: 300;
 	text-align: center;
 	line-height: 1.2;
@@ -266,50 +263,37 @@ header div nav ul a {
 }
 
 
-/* Grid E - ENROLL */
+/* =================== Grid E - ENROLL =================== */
 #whoToCoach {
 	grid-area: e;
-	/*background: url("../images/belle_isle_detroit_unsplash.jpg");*/
 	background: url("../images/belle_isle_detroit_unsplash_crop_2000px.jpg");
 	background-size: cover;
 	color: white;
 	padding: 19vh 0;
-/*	line-height: 120%;
-*/	/*min-height:500px;		*/
+	/*min-height:500px;		*/
 }
 
-/*#whoToCoach .whoOverlay {
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background-color: rgba(60, 115, 118, .1);
-}*/
-
-.whoOverlay h2 {
+.who h2 {
 	color: white;
 	padding: 15vh 0 5vh 0;
 }
 
 .whoLine {
 	margin-left: 45%;
-	/*height: 1vh;*/
-	/*padding-top: 2vh;*/
 	width: 20vh;
 	border-style: none none solid none;
 	border-width: 1px;
 	border-color: white;
 }
 
-.whoOverlay p {
+.who p {
 	color: white;
 	padding: 4vh 20vh 0 20vh;
 	line-height: 1.5;
 }
 
 
-
-/* Grid F - COACHES */
+/* =================== Grid F - COACHES =================== */
 #coaches {
 	grid-area: f;
 	display: flex;
@@ -369,7 +353,7 @@ header div nav ul a {
 }
 
 
-/* Grid G - FORM */
+/* =================== Grid G - FORM =================== */
 #form {
 	grid-area: g;
 	display: flex;
@@ -435,12 +419,9 @@ form .main {
 
 form #submit {
 	padding: 2vh;
-	/*background: rgb(60, 60, 60);*/
 	background: black;
 	text-transform: uppercase;
-	/*border: .25px solid rgb(70,70,70);*/
 	border: .25px solid black;
-	/*font-weight: bold;*/
 }
 
 input::placeholder {
@@ -454,7 +435,7 @@ aside small {
 }
 
 
-/* Grid H - FOOTER */
+/* =================== Grid H - FOOTER =================== */
 footer {
 	background: rgb(0,0,0);
 }
@@ -470,19 +451,21 @@ footer {
 
 .footer div{
 	display: flex;
+	align-items: center;
 	justify-content: center;
 	flex: 1;
+	height: 5em;
 	border-style: none solid none none;
 	border-width: .25px;
 	border-color: white;
 }
 
-.footer div.noBorder, .footer div.noBorder {
+.footer div.noBorder, .footer div.noBorder{
 	border-style: none none none none;
 }
 
 .headerArrow a img{
-	width: 7vh;
+	width: 2.5em;
 }
 
 .kompasFooter {
@@ -492,34 +475,37 @@ footer {
 }
 
 .kompasFooter .logo {
-	width: 30vh;
+	width: 15em;
 	display: flex;
 	flex-direction: column;
 }
 
-.kompasFooter .logo a img {
-	padding: 2vh 0 1.8vh 15vh;
+.kompasFooter .logo img {
+	width: 1.5em;
 }
 
 .kompasFooter .logo small {
-	padding-left: 3vh;
 	color: white;
 }
 
 .contact {
 	color: white;
+	width: 20em;
 	display: flex;
-	flex-direction: column;
+	flex-direction: column;	
 }
 
-.contact img {
-	width: 8vh;
-	padding: 0 2vh;
+.socialLinks img {
+	width: 50%;
 }
 
-.footer div small {
-	padding-top: 1vh;
-	line-height: 3vh;
+.footer .kompasFooter small {
+	padding-top: 1em;
+	font-weight: lighter;	
+}
+
+.footer .contact small {
+	padding-bottom: 1.15em;
 	font-weight: lighter;	
 }
 
