@@ -36,30 +36,32 @@ h4 {
 p {
 	font-size: 1em;
 	font-family: 'Source Sans Pro', sans-serif;
-	/*font-family: 'Lato', sans-serif;*/
 	font-weight: 300;
 	text-align: center;
 }
 small, input {
 	font-size: 0.75em;
 	font-family: 'Source Sans Pro', sans-serif;
-	/*font-family: 'Lato', sans-serif;*/
-	font-weight: 400i;
+	font-weight: 300i;
 	text-align: center;
 }
 small.footnotes {
-	font-weight: 400i;
+	font-weight: 300i;
 	font-style: italic;
 }
 a {
 	text-decoration: none;
 }
 
+a.active {
+	border-bottom:1px solid black;
+}
+
 
 body.coachingIntroduction { 
   display: grid;
-  min-height: 100vh;
-  grid-template-rows: minmax(10vh, auto) minmax(90vh, auto) minmax(90vh, auto) minmax(90vh, auto) minmax(90vh, auto) minmax(90vh, auto) minmax(50vh, auto) minmax(20vh, auto);
+  /*min-height: 100vh;*/
+  grid-template-rows: minmax(10vh, auto) minmax(90vh, auto) minmax(90vh, auto) minmax(90vh, auto) minmax(90vh, auto) minmax(90vh, auto) minmax(50vh, auto) minmax(22vh, auto);
   grid-template-areas: "a"
                        "b"
                        "c"
@@ -76,18 +78,19 @@ body.coachingIntroduction #header .header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	padding: 10px;
+	padding: 2px;
 	background: white;
 	width: 100%;
 	position: fixed;
 }
 
 .headerLogo {
-	width: 16vh;
+	width: 30vh;
 }
 
 header div nav ul {
 	display: flex;
+	/*width: 2vh;*/
 }
 
 header div nav ul a {
@@ -98,10 +101,14 @@ header div nav ul a {
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
+/*header div nav ul a:hover {
+  text-decoration: underline;
+}*/
+
 /* Grid B - Intro */
 #intro {
 	grid-area: b;	
-	background: url('../images/detroit_unsplash.jpg') no-repeat top center #fff;
+	background: url('../images/detroit_unsplash_2000.jpg') no-repeat top center #fff;
 	background-size: cover;
 	display: flex;
 	flex-direction: column;	
@@ -340,6 +347,14 @@ header div nav ul a {
 	line-height: 300%; 
 }
 
+.coaches div ul a {
+	color: white;
+}
+
+.coaches div ul a:hover {
+  text-decoration: underline;	
+}
+
 .coachesProfiles {
 	padding-left: 15vh;
 }
@@ -351,14 +366,13 @@ header div nav ul a {
 	display: flex;
 	background: rgb(84, 84, 84);
 	color: white;
-	padding-top: 8vh;	
 }
 
 #form h2 {
 	color: white;
 	width: 40%;
 	line-height: 110%;
-	padding: 8vh 0 0 10vh;
+	padding: 16vh 0 0 10vh;
 }
 
 .form {
@@ -366,6 +380,7 @@ header div nav ul a {
 	flex: 1;
 	flex-direction: column;
 	text-align: left;
+	padding-top: 7vh;
 }
 
 form {
@@ -386,14 +401,13 @@ input, select {
 select.challengesList, option {
    -webkit-appearance: button;
    -webkit-border-radius: 0;
-   /*-webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);*/
-/*   -webkit-padding-end: 10vh;
-   -webkit-padding-start: 5vh;*/
+   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+   -webkit-padding-end: 10vh;
+   -webkit-padding-start: 5vh;
    -webkit-user-select: none;
-	/*background: url('../images/detroit_unsplash.jpg') no-repeat top center #fff;*/
    background: url(../images/down_arrow.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
    background-position: 97% center;
-   /*background-repeat: no-repeat;*/
+   background-repeat: no-repeat;
    background: rgb(84, 84, 84);
    border: .25px solid white;
    color: white;
@@ -410,9 +424,10 @@ form .main {
 }
 
 form #submit {
-	margin
-	text-transform: uppercase;
 	padding: 2vh;
+	background: rgb(70, 70, 70);
+	text-transform: uppercase;
+	/*font-weight: bold;*/
 }
 
 input::placeholder {
@@ -431,41 +446,60 @@ footer {
 	background: rgb(0,0,0);
 }
 
-footer .footer {
+.footer {
 	grid-area: h;	
 	display: flex;
 	align-items: center;
-	justify-content: space-around;
-	padding-top: 5vh;
-	padding-top: 5vh;
+	height: 22vh;
+	justify-content: space-between;
 }
 
-footer .footer div {
+.footer div{
 	flex: 1;
 	border-style: none solid none none;
 	border-width: .25px;
 	border-color: white;
 }
 
-footer .footer div.noBorder {
+.footer div.noBorder, .footer .kompasFooter .noBorder {
 	border-style: none none none none;
 }
 
-footer #arrow img {
-	width: 6vh;
+.headerArrow {
+}
+
+.headerArrow a img{
+	width: 7vh;
 }
 
 .kompasFooter {
+	display: flex;
+	flex-direction: column;
 	align-items: center;
 }
 
-.footerLogo {
-	width: 5vh;
+.logo {
+	width: 30vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.logo a img {
+	/*justify-self: center;*/
+	padding: 2vh 0 1.8vh 15vh;
+}
+
+.logo small {
+	padding-left: 3vh;
+	color: white;
 }
 
 .contact {
 	/*align-items: center;*/
 	color: white;
+	display: flex;
+	flex-direction: column;
+	/*justify-content: center;*/
 }
 
 .footerLinks {
@@ -479,6 +513,19 @@ footer #arrow img {
 	padding: 0 2vh;
 }
 
+.contact small {
+	padding-top: 1vh;
+	line-height: 3vh;
+	font-weight: lighter;	
+}
+
+.contact small a {
+	color: white;
+	font-weight: bold;
+}
+.contact small a:hover {
+	color: #3d7376;
+}
 
 
 /*         mobile version         
