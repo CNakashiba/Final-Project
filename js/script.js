@@ -31,9 +31,12 @@ $(document).ready(function(){
 		900, 'swing', function(){
 			window.location.hash = target;
 		}); 
-		// $('#headerLinks li').show()
-		
-		$(this).attr('class', 'active'); 			
+
+		// nav headings are underlined when in that section		
+		$(this).attr('class', 'active'); 	
+	
+		// nav headings are not underlined when not in that section 
+		// top of the page has none underlined 
 	});
 });
 
