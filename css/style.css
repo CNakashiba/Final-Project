@@ -55,6 +55,7 @@ a {
 
 a.active {
 	border-bottom:1px solid black;
+	padding: 5px;
 }
 
 
@@ -80,7 +81,7 @@ body.coachingIntroduction #header {
 	grid-area: a;	
 }
 
-body.coachingIntroduction #header .header {
+body.coachingIntroduction #header #headerContents {
 	/*grid-area: a;*/
 	display: flex;
 	width: 100%;
@@ -92,7 +93,7 @@ body.coachingIntroduction #header .header {
 	flex-wrap: wrap;
 }
 
-.header .logo {
+#headerContents .logo {
 	width: 7em;
     display: flex;
     flex-direction: column;
@@ -102,13 +103,30 @@ body.coachingIntroduction #header .header {
 	width: 100%;
 }
 
-header div nav ul {
-	width: 20em;
+#headerLinks {
+	width: 25em;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
+	/*border-bottom: 1px solid black;*/
 }
 
-header div nav ul a {
+#headerLinks li {
+	text-align: center;
+	width: 5em;
+}
+/*#aboutUnderline {
+	border-bottom: 1px solid black;
+}
+
+#coachingUnderline {
+	border-bottom: 1px solid black;
+}
+
+#applyUnderline {
+	border-bottom: 1px solid black;
+}*/
+
+#headerLinks ul a {
 	display: block;
 	color: black;
 	font-family: 'Source Sans Pro', sans-serif;
@@ -120,10 +138,7 @@ header div nav ul a {
 	grid-area: b;	
 	background: url('../images/detroit_unsplash_2000.jpg') no-repeat top center #fff;
 	background-size: cover;
-	display: flex;
 	width: 100%;
-	flex-direction: column;	
-	align-content: center;
 	position: relative;
 	/*min-height:500px;*/
 	/*min-height: 90vh;*/
@@ -136,30 +151,38 @@ header div nav ul a {
 	left: 0;
 	background: rgba(255, 255, 255, .7);
 	position: absolute;
-	top: 20vh;
+	top: 22%;
 }
 
+.intro {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
 .intro h1 {
+	width: 100%;
 	position: absolute;
-	top: 30vh;
-	left: 25%
+	top: 35%;
+	/*padding-top: 10%;*/
 }
 
 .introLine {
 	position: absolute;
 	left: 45%;
-	height: 42vh;
-	width: 20vh;
+	height: 46%;
+	width: 10%;
 	border-style: none none solid none;
 	border-width: 1px;
 	border-color: black;
 }
 
 .intro p {
+	width: 100%;
+	position: absolute;
 	margin-top: 47vh;
 	font-weight: 400;
-	position: absolute;
-	left: 35vh;	
+	/*left: 35vh;	*/
 }
 
 
