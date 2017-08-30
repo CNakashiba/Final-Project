@@ -114,7 +114,7 @@ body.coachingIntroduction #header #headerContents {
 	text-align: center;
 	width: 5em;
 }
-/*#aboutUnderline {
+#aboutUnderline {
 	border-bottom: 1px solid black;
 }
 
@@ -124,7 +124,7 @@ body.coachingIntroduction #header #headerContents {
 
 #applyUnderline {
 	border-bottom: 1px solid black;
-}*/
+}
 
 #headerLinks ul a {
 	display: block;
@@ -136,13 +136,22 @@ body.coachingIntroduction #header #headerContents {
 /* =================== Grid B - INTRO =================== */
 #intro {
 	grid-area: b;	
-	background: url('../images/detroit_unsplash_2000.jpg') no-repeat top center #fff;
+	/*background: url('../images/detroit_unsplash_2000.jpg') no-repeat top center #fff;*/
 	background-size: cover;
 	width: 100%;
-	position: relative;
+	/*position: relative;*/
 	/*min-height:500px;*/
 	/*min-height: 90vh;*/
 }
+
+/* parllax */
+.parallax-window {
+	height: 100%;
+	width: 100%;
+	background: transparent;
+	background-size: cover;
+}
+/* */
 
 #intro .clearOverlay {
 	height: 300px;
@@ -343,15 +352,20 @@ body.coachingIntroduction #header #headerContents {
 
 .coaches {
 	display: flex;
-	padding: 5vh 0 0 7vh;
-	align-content: space-around;
+	/*justify-content: space-between;*/
+	padding: 5%;
+	width: 100%;
+}
+
+.challenges, #carousel {
 	flex: 1;
 }
 
 .challenges p {
-	width: 90vh;
+	width: 90%;
 	text-align: left;
-	padding-bottom: 3vh; 
+	padding-bottom: 5%; 
+	line-height: 1.2;
 }
 
 .coaches div ul{
@@ -372,8 +386,57 @@ body.coachingIntroduction #header #headerContents {
   text-decoration: underline;	
 }
 
-.coachesProfiles {
-	padding-left: 15vh;
+#carousel {
+	width: 20vw;
+	height: 50vh;
+	white-space: nowrap;
+	overflow: hidden;
+	position: relative;
+}
+
+.slide-image {
+	width: 100vw;
+	height: 100vh;
+	background-position: center;
+	background-size: cover;
+	display: inline-block;
+}
+
+.arrow {
+	width: 5%;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%);
+	cursor: pointer;
+}
+
+#right-arrow {
+  right: 5px;
+}
+
+#left-arrow {
+  left: 25px;
+}
+
+#slide1 {
+	/*background: white;*/
+	background-image: url('../images/p_Mark Placeholder.svg');
+}
+#slide2 {
+	background: black;
+	/*background-image: url('../images/p_Greg Placeholder.svg');*/
+}
+#slide3 {
+	/*background-image: url('../images/p_Mark Placeholder.svg');*/
+	background: green;
+}
+#slide4 {
+	/*background-image: url('../images/p_Greg Placeholder.svg');*/
+	background: yellow;
+}
+#slide5 {
+	/*background-image: url('../images/p_Mark Placeholder.svg');*/
+	background: red;
 }
 
 
@@ -544,5 +607,19 @@ footer {
 }
 
 
-/*         mobile version         
+/*         mobile version         */
+@media (max-device-width: 1024px) {
+  .arrow {
+    width: 20%;
+  }
+}
+
+@media (max-width: 768px) {
+  .arrow {
+    width: 10%;
+  }
+}
+
 @media screen and (max-width: 780px){
+	
+	}
