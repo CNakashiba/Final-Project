@@ -77,10 +77,11 @@ body.coachingIntroduction {
 /* =================== Grid A - HEADER =================== */
 body.coachingIntroduction #header {
 	height: 4.4em;
+	grid-area: a;	
 }
 
 body.coachingIntroduction #header .header {
-	grid-area: a;
+	/*grid-area: a;*/
 	display: flex;
 	width: 100%;
 	align-items: center;
@@ -163,17 +164,17 @@ header div nav ul a {
 
 
 /* =================== Grid C - D3 =================== */
-#d3 {
+#about {
 	grid-area: c;
 	width: 100%;
 	align-content: center;
 }
 
-.d3 h2 {
-	padding-top: 10vh;
+.about h2 {
+	padding-top: 10%;
 }
 
-.d3Line {
+.aboutLine {
 	margin-left: 45%;
 	height: 3vh;
 	width: 20vh;
@@ -182,7 +183,7 @@ header div nav ul a {
 	border-color: black;
 }
 
-.d3 img {
+.about img {
 	padding: 5vh 0 0 35vh;
 }
 
@@ -264,7 +265,7 @@ header div nav ul a {
 
 
 /* =================== Grid E - ENROLL =================== */
-#whoToCoach {
+#coaching {
 	grid-area: e;
 	background: url("../images/belle_isle_detroit_unsplash_crop_2000px.jpg");
 	background-size: cover;
@@ -358,6 +359,7 @@ header div nav ul a {
 	grid-area: g;
 	display: flex;
 	background: rgb(84, 84, 84);
+	width: 100%;
 	color: white;
 }
 
@@ -365,7 +367,7 @@ header div nav ul a {
 	color: white;
 	width: 40%;
 	line-height: 110%;
-	padding: 16vh 0 0 10vh;
+	padding: 10% 0 0 10%;
 }
 
 .form {
@@ -373,52 +375,52 @@ header div nav ul a {
 	flex: 1;
 	flex-direction: column;
 	text-align: left;
-	padding-top: 7vh;
+	padding-top: 4%;
 }
 
 form {
 	display: flex;
 	flex-direction: column;
-	padding-left: 15vh;
+	padding-left: 14%;
 }
 
-input, select {
+input, select, option {
 	background: rgb(84, 84, 84);
 	border: .25px solid white;
 	color: white;
 	font-weight: 300;
 	text-align: left;
-	width: 75vh;
+	width: 90%;
 }
 
 /* RESOURCE: https://codepen.io/ericrasch/pen/zjDBx */
-select.challengesList, option {
+select.challengesList, select.challengesList option {
    -webkit-appearance: button;
    -webkit-border-radius: 0;
    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-   -webkit-padding-end: 10vh;
-   -webkit-padding-start: 5vh;
+   /*-webkit-padding-end: 10vh;*/
+   /*-webkit-padding-start: 5vh;*/
    -webkit-user-select: none;
    background: url(../images/down_arrow.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
-   background-position: 97% center;
+   background-position: 97% end;
    background-repeat: no-repeat;
    background: rgb(84, 84, 84);
    border: .25px solid white;
    color: white;
    /*font-size: inherit;*/
    /*overflow: hidden;*/
-   padding: 2.2vh 2vh;
+   padding: 2.4%;
    text-overflow: ellipsis;
    white-space: nowrap;
-   width: 75vh;
+   width: 90%;
 }
 
 form .main {
-	padding: 2vh;
+	padding: 2.4%;
 }
 
 form #submit {
-	padding: 2vh;
+	padding: 2.4%;
 	background: black;
 	text-transform: uppercase;
 	border: .25px solid black;
@@ -430,7 +432,8 @@ input::placeholder {
 }
 
 aside small {
-	padding: 2vh 0 0 15vh;
+	/*padding: 2vh 0 0 15vh;*/
+	padding: 2.4% 0 0 16%;
 	text-align: left; 
 }
 
