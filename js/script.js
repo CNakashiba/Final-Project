@@ -19,7 +19,16 @@ $(document).ready(function(){
 		}); 
 
 		// nav headings are underlined when in that section		
-		$(this).attr('class', 'active'); 	
+		// $(this).attr('class', 'active');
+		$(this).click(underLine); 	
+		function underLine(){
+			event.preventDefault();
+			blackout();
+			$(this).attr('class', 'active');
+		}
+		function blackout(){
+			$('a').attr('class', 'a');
+		}
 		// nav headings are not underlined when not in that section 
 
 		// top of the page has none underlined 
