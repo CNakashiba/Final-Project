@@ -42,7 +42,7 @@ p {
 small, input {
 	font-size: 0.75em;
 	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 300i;
+	font-weight: 300;
 	text-align: center;
 }
 small.footnotes {
@@ -89,7 +89,7 @@ body.coachingIntroduction #header #headerContents {
 	justify-content: space-between;
 	background: white;
 	padding: 10px 20px 10px 20px;
-	position: fixed;
+	position: fixed; z-index: 1;
 	flex-wrap: wrap;
 }
 
@@ -132,6 +132,17 @@ body.coachingIntroduction #header #headerContents {
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
+#headerLinks ul a:link, #headerLinks ul a:active {
+	color: gray;
+}
+
+#headerLinks ul a:visited {
+	color: gray;
+}
+
+#headerLinks ul a:visited {
+	color: red;
+}
 
 /* =================== Grid B - INTRO =================== */
 #intro {
@@ -159,6 +170,7 @@ body.coachingIntroduction #header #headerContents {
 	top: 0;
 	left: 0;
 	background: rgba(255, 255, 255, .7);
+	/*background: rgba(234, 243, 242, .7);*/
 	position: absolute;
 	top: 22%;
 }
@@ -200,10 +212,13 @@ body.coachingIntroduction #header #headerContents {
 	grid-area: c;
 	width: 100%;
 	align-content: center;
+	background: white;
+	/*background: rgba(234, 243, 242, .7);*/
 }
 
 .about h2 {
 	padding-top: 10%;
+	color: rgb(84, 84, 84);
 }
 
 .aboutLine {
@@ -331,7 +346,7 @@ body.coachingIntroduction #header #headerContents {
 	grid-area: f;
 	display: flex;
 	flex-direction: column;
-	background: rgb(80, 113, 132);
+	background: rgb(175, 175, 175);
 	color: white;
 	padding-top: 8vh;
 }
@@ -382,9 +397,9 @@ body.coachingIntroduction #header #headerContents {
 	color: white;
 }
 
-.coaches div ul a:hover {
-  text-decoration: underline;	
-}
+/*.coaches div ul a:hover {
+  	
+}*/
 
 #carousel {
 	width: 20vw;
@@ -444,13 +459,13 @@ body.coachingIntroduction #header #headerContents {
 #form {
 	grid-area: g;
 	display: flex;
-	background: rgb(84, 84, 84);
+	background: rgb(234, 243, 242);
 	width: 100%;
 	color: white;
 }
 
 #form h2 {
-	color: white;
+	color: rgb(84, 84, 84);
 	width: 40%;
 	line-height: 110%;
 	padding: 10% 0 0 10%;
@@ -471,7 +486,7 @@ form {
 }
 
 input, select, option {
-	background: rgb(84, 84, 84);
+	background: rgb(217, 238, 227); 
 	border: .25px solid white;
 	color: white;
 	font-weight: 300;
@@ -490,9 +505,9 @@ select.challengesList, select.challengesList option {
    background: url(../images/down_arrow.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
    background-position: 97% end;
    background-repeat: no-repeat;
-   background: rgb(84, 84, 84);
+   background: rgb(217, 238, 227);
    border: .25px solid white;
-   color: white;
+   color: rgb(84, 84, 84);
    /*font-size: inherit;*/
    /*overflow: hidden;*/
    padding: 2.4%;
@@ -507,13 +522,13 @@ form .main {
 
 form #submit {
 	padding: 2.4%;
-	background: black;
+	background: rgb(190, 215, 200);
 	text-transform: uppercase;
-	border: .25px solid black;
+	border: .25px solid rgb(190, 215, 200);
 }
 
 input::placeholder {
-	color: white;
+	color: rgb(84, 84, 84);
 	font-weight: 300;
 }
 
@@ -521,12 +536,13 @@ aside small {
 	/*padding: 2vh 0 0 15vh;*/
 	padding: 2.4% 0 0 16%;
 	text-align: left; 
+	color: rgb(84, 84, 84);
 }
 
 
 /* =================== Grid H - FOOTER =================== */
 footer {
-	background: rgb(0,0,0);
+	background: rgb(84,84,84);
 }
 
 .footer {
@@ -607,6 +623,39 @@ footer {
 }
 
 
+/*===========================================================*/
+body.application { 
+  display: grid;
+  /*min-height: 100vh;*/
+  grid-template-rows: minmax(10vh, auto) minmax(90vh, auto) minmax(22vh, auto);
+  grid-template-areas: "a"
+                       "b"
+                       "c"
+}
+
+#applicationHeader {
+	grid-area: a;
+}
+
+#applicationForm {
+	grid-area: b;
+	background: rgb(234, 243, 242);
+	padding: 5% 5% 15% 5%;
+}
+
+#applicationForm h2, #applicationForm small {
+	color: rgb(84, 84, 84);
+}
+
+#applicationForm {
+	color: white;
+}
+
+#applicationFooter {
+	grid-area: c;
+}
+
+/*=============================================================================================*/
 /*         mobile version         */
 @media (max-device-width: 1024px) {
   .arrow {

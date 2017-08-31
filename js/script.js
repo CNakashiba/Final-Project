@@ -1,11 +1,12 @@
 $(document).ready(function(){		
 
 	// parallax
-	$('.parallax-window').parallax({imageSrc: '../images/detroit_unsplash_2000.jpg'});
+	$('.parallax-window').parallax({imageSrc: 'images/detroit_unsplash_2000.jpg'});
 
 // scrolling from one part of the page to another
 // ===============================================
 	$('a').on('click', function (e){
+		// remove  "active" class from all links, using removeClass()
 		e.preventDefault();
 		var target = $(this)[0]['hash']
 		var $target = $(target);
@@ -89,12 +90,24 @@ $(document).ready(function(){
 	      goToSlide(no + 1)
 	  });
 	  
-	  // function goToSlide(no){
-	   
-	  //  };
-	  // }
-
 	  function goToSlide(no){
+	   
+	   };
+	  
+
+	  // STEP 1
+	  //Build out function goToSlide(no) so that the following function invocations get you what you want
+
+	  // goToSlide("slide1");
+	  // goToSlide("slide2");
+	  // goToSlide("slide3");
+	  // goToSlide("slide4");
+	  goToSlide("slide5");
+	  
+	  function goToSlide(no){
+	  	//count the number of slides
+	  	// get the total width of slides in front of the one you want
+	  	//
 		no.preventDefault();	  	
 		window.clearInterval(interval);
 	    var $currentSlide = $('#carousel').find('no');
@@ -108,7 +121,12 @@ $(document).ready(function(){
 	  	});  
 	  }
 
+	  // STEP 2
+	   // be able to click on a link , and know which link (in terms of its order) that you clicked on
+	  // e.g. "Business Stragey " => 1  "Financials & ..." => 2
 
+	  // STEP 3 
+	  // Be able to take the number from STEP2, and use it to run the function, //goToSlide("slide3");
 /////////////////////////////
 
 });

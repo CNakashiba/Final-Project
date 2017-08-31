@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Kompas Small Business Coaching Application</title>
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i, 400" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700" rel="stylesheet"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"> 
+  <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+  <!-- parallax -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+  <script src="js/parallax.min.js"></script>
+  <script src="js/parallax.js"></script>
+  <!--  -->
+  <script type="text/javascript" src="js/script.js"></script>
+  <meta charset="utf-8">
+  <meta name="description" content="Kompas Small Business Coaching. Description in one sentence here.">
+<!-- favicon -->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body class="application">
+  <header id="applicationHeader">
+  	<div id="headerContents">
+      <div class="logo">
+        <a href="http://www.kompasstrategy.com" alt="Kompas Strategy Website Link">
+        <img class="headerLogo" src="images/kLogo.svg" alt="Kompas Strategy Logo">
+        </a>
+      </div>
+  	</div>
+  </header>
+
+  <aside id="applicationForm" id="contactNav">
+    <h2>Small Business Coaching Application Form</h2>
+    <div class="form">
+      <form method="POST">
+        <input required type="text" placeholder="Full Name" name="Name" id="name" class="main">
+        <input required type="email" placeholder="Email" name="Email" id="email" class="main">
+        <input type="text" placeholder="Company Name" name="Company Name" id="companyName" class="main">
+        <input type="text" placeholder="Company Website" name="Company Website" id="companyWebsite" class="main">
+        <input type="text" placeholder="Industry" name="Industry" id="industry" class="main">
+        <input type="text" placeholder="Your Role In Your Company" name="Company Role" id="companyRole" class="main">
+        <input type="text" placeholder="Company Description" name="Company Description" id="companyDescription" class="main">
+        <!-- <input required type="text" placeholder="Challenge" name="Challenge" id="challenge" class="main"> -->
+        <!-- https://codepen.io/ericrasch/pen/zjDBx -->
+        <select name="Challenges" class="challengesList">
+          <option value="Blank" name="Blank">What Challenge Are You Facing?</option>
+          <option value="Strategy" name="Strategy">Business Strategy &amp; Operations</option>
+          <option value="Finance">Financials &amp; Bookkeeping</option>
+          <option value="Human Resources">Human Resources</option>
+          <option value="Lending">Lending</option>
+          <option value="Marketing">Marketing</option>
+        </select>
+
+
+        <input type="submit" placeholder="SUBMIT" name="Submit" id="submit">
+      </form>
+      <small class="footnotes">We have a limited number of time slots available and not all businesses that apply will qualify.</small>
+    </div>
+  </aside>
+
+  <footer id="footer applicationFooter">
+    <div class="footer">
+      <div class="headerArrow">
+        <!-- https://designshack.net/articles/html/how-to-link-to-specific-points-in-a-page-and-animate-the-scroll/ -->
+        <a href="#header" alt="Click arrow to go to the top of the page.">
+        <img class="arrowToTop" src="images/arrow_white_10x15.svg" alt="Arrow pointing up.">
+        </a>
+      </div>
+      <div class="kompasFooter">
+        <div class="logo noBorder">
+          <a href="http://www.kompasstrategy.com" alt="Kompas Strategy Website Link">
+          <img class="footerLogo" src="images/kLogo_white_transparent_30px.png" alt="Kompas Strategy Logo">
+          </a>
+          <small>2017 Kompas. All rights reserved.</small>
+        </div>
+      </div>
+      <div class="contact noBorder"> 
+        <div class="socialLinks noBorder">
+          <a href="https://www.linkedin.com"><img src="images/f_linkedin_white_50.png" alt="Link to the LinkedIn website."></a>
+          <a href="https://www.facebook.com"><img src="images/f_facebook_white_50.png" alt="Link to the Facebook website."></a>
+        </div>
+        <small>Questions? Reach out : <a href="mailto:info@KompasStrategy.com?Subject=[small business coaching] Question" target="_top">info@kompasstrategy.com</a></small>
+      </div>  
+    </div>    
+  </footer>
+</body>
+
+</html>
