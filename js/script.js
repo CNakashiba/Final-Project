@@ -1,7 +1,10 @@
 $(document).ready(function(){		
 
 	// parallax
-	$('.parallax-window').parallax({imageSrc: 'images/detroit_unsplash_2000.jpg'});
+	$('#intro').scroll(function(){
+    	s = $('#intro').scrollTop();
+    	$('#introImage img').css('-webkit-transform', 'translateY(' + (s/3) + 'px)');
+  	});
 
 // scrolling from one part of the page to another
 // ===============================================
@@ -20,6 +23,7 @@ $(document).ready(function(){
 
 		// nav headings are underlined when in that section		
 		// $(this).attr('class', 'active');
+
 		$(this).click(underLine); 	
 		function underLine(){
 			event.preventDefault();
@@ -29,9 +33,7 @@ $(document).ready(function(){
 		function blackout(){
 			$('a').attr('class', 'a');
 		}
-		// nav headings are not underlined when not in that section 
 
-		// top of the page has none underlined 
 	});
 
 // ==========================================================================
@@ -117,7 +119,7 @@ $(document).ready(function(){
 	  	//count the number of slides
 	  	// get the total width of slides in front of the one you want
 	  	//
-		no.preventDefault();	  	
+		event.preventDefault();	  	
 		window.clearInterval(interval);
 	    var $currentSlide = $('#carousel').find('no');
 	    var width = $currentSlide.width();

@@ -52,13 +52,22 @@ small.footnotes {
 a {
 	font-size: 1em;
 	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 300;	
+	font-weight: 400;	
 	text-decoration: none;
 	color: rgb(84, 84, 84);
+}
+#headerLinks a:hover, #headerLinks a:active {
+	color: rgb(60, 116, 118);
+}
+
+#headerLinks ul a:visited {
+	/*color: rgb(130, 19, 16);*/
+	color: red;
 }
 .a a.active {
 	border-bottom:1px solid black;
 	padding: 5px;
+	color: rgb(130, 19, 16);
 	color: red;
 }
 
@@ -66,6 +75,28 @@ a {
 	border-bottom:1px solid white;
 	padding: 5px;
 	color: white;
+}
+
+/* ========================= parallax ========================= */
+/* reference: http://callmenick.com/post/simple-parallax-scrolling-effect */
+
+section.module.parallax {
+  height: 90vh;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+section.module.parallax-1 {
+  background-image: url("../images/detroit_unsplash_2000.jpg");
+}
+section.module.parallax-2 {
+  background-image: url("../images/lake michigan_unsplash_cut.jpg");
+}
+section.module.parallax-3 {
+  background-position: 50% 100%;	
+  background-image: url("../images/belle_isle_detroit_unsplash.jpg");
 }
 
 /* ========================= BODY ========================= */
@@ -141,37 +172,25 @@ body.coachingIntroduction #header #headerContents {
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
-#headerLinks ul a:link, #headerLinks ul a:active {
-	color: gray;
-}
-
-#headerLinks ul a:visited {
-	color: gray;
-}
-
-#headerLinks ul a:visited {
-	color: red;
-}
-
 /* =================== Grid B - INTRO =================== */
 #intro {
 	grid-area: b;	
 	/*background: url('../images/detroit_unsplash_2000.jpg') no-repeat top center #fff;*/
-	background-size: cover;
+	/*background-size: cover;*/
 	width: 100%;
-	/*position: relative;*/
+	height: 100vh;
+	position: relative;
 	/*min-height:500px;*/
 	/*min-height: 90vh;*/
 }
 
-/* parllax */
-.parallax-window {
-	height: 100%;
+#introImage {
 	width: 100%;
-	background: transparent;
-	background-size: cover;
+	position: absolute;
+	top: 0;
+	/*min-height:500px;*/
+	/*min-height: 90vh;*/
 }
-/* */
 
 #intro .clearOverlay {
 	height: 300px;
@@ -179,8 +198,7 @@ body.coachingIntroduction #header #headerContents {
 	top: 0;
 	left: 0;
 	background: rgba(255, 255, 255, .7);
-	/*background: rgba(234, 243, 242, .7);*/
-	position: absolute;
+	position: relative;
 	top: 22%;
 }
 
@@ -189,12 +207,13 @@ body.coachingIntroduction #header #headerContents {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	position: relative;
 }
 .intro h1 {
 	width: 100%;
 	position: absolute;
 	top: 35%;
-	/*padding-top: 10%;*/
+	padding-top: 10%;
 }
 
 .introLine {
@@ -221,7 +240,7 @@ body.coachingIntroduction #header #headerContents {
 	grid-area: c;
 	width: 100%;
 	align-content: center;
-	background: white;
+	background: rgb(230, 242, 240);
 	/*background: rgba(234, 243, 242, .7);*/
 }
 
@@ -247,8 +266,8 @@ body.coachingIntroduction #header #headerContents {
 /* =================== Grid D - FACTS =================== */
 #facts {
 	grid-area: d;
-	background: url("../images/lake michigan_unsplash_cut.jpg");
-	background-size: cover;
+	/*background: url("../images/lake michigan_unsplash_cut.jpg");*/
+	/*background-size: cover;*/
 	width: 100%;
 	border: none;
 	/*min-height:500px;*/
@@ -320,39 +339,9 @@ body.coachingIntroduction #header #headerContents {
 }
 
 
-/* =================== Grid E - ENROLL =================== */
+/* =================== Grid E - COACHES =================== */
 #coaching {
 	grid-area: e;
-	background: url("../images/belle_isle_detroit_unsplash_crop_2000px.jpg");
-	background-size: cover;
-	color: white;
-	padding: 19vh 0;
-	/*min-height:500px;		*/
-}
-
-.who h2 {
-	color: white;
-	padding: 15vh 0 5vh 0;
-}
-
-.whoLine {
-	margin-left: 45%;
-	width: 20vh;
-	border-style: none none solid none;
-	border-width: 1px;
-	border-color: white;
-}
-
-.who p {
-	color: white;
-	padding: 4vh 20vh 0 20vh;
-	line-height: 1.5;
-}
-
-
-/* =================== Grid F - COACHES =================== */
-#coaches {
-	grid-area: f;
 	display: flex;
 	flex-direction: column;
 	background: rgb(175, 175, 175);
@@ -360,7 +349,7 @@ body.coachingIntroduction #header #headerContents {
 	padding-top: 8vh;
 }
 
-#coaches h2 {
+#coaching h2 {
 	color: white;
 	padding-bottom: 2vh;
 }
@@ -447,16 +436,16 @@ body.coachingIntroduction #header #headerContents {
 	background-image: url('../images/p_Mark Placeholder.svg');
 }
 #slide2 {
-	background: black;
+	background: gray;
 	/*background-image: url('../images/p_Greg Placeholder.svg');*/
 }
 #slide3 {
 	/*background-image: url('../images/p_Mark Placeholder.svg');*/
-	background: green;
+	background: rgb(80, 113, 132);
 }
 #slide4 {
 	/*background-image: url('../images/p_Greg Placeholder.svg');*/
-	background: yellow;
+	background: rgb(230, 242, 240);
 }
 #slide5 {
 	/*background-image: url('../images/p_Mark Placeholder.svg');*/
@@ -464,21 +453,51 @@ body.coachingIntroduction #header #headerContents {
 }
 
 
+/* =================== Grid F - STUDENTS =================== */
+#students {
+	grid-area: f;
+	/*background: url("../images/belle_isle_detroit_unsplash_crop_2000px.jpg");*/
+	/*background-size: cover;*/
+	color: white;
+	padding: 19vh 0;
+	/*min-height:500px;		*/
+}
+
+.who h2 {
+	color: white;
+	padding: 15vh 0 5vh 0;
+}
+
+.whoLine {
+	margin-left: 45%;
+	width: 20vh;
+	border-style: none none solid none;
+	border-width: 1px;
+	border-color: white;
+}
+
+.who p {
+	color: white;
+	padding: 4vh 20vh 0 20vh;
+	line-height: 1.5;
+}
+
+
 /* =================== Grid G - FORM =================== */
-#form {
+#form div {
 	grid-area: g;
 	display: flex;
-	background: rgb(234, 243, 242);
+	background: rgb(230, 242, 240);
 	width: 100%;
 	color: black;
 }
 
-#form h2 {
-	/*color: rgb(84, 84, 84);*/
-	color: rgb(130, 20, 15);
+#form div h2 {
+	color: rgb(84, 84, 84);
+	/*color: rgb(130, 20, 15);*/
 	width: 40%;
 	line-height: 110%;
-	padding: 10% 0 0 10%;
+	padding: 10% 0 0 8%;
 }
 
 .form {
@@ -486,10 +505,10 @@ body.coachingIntroduction #header #headerContents {
 	flex: 1;
 	flex-direction: column;
 	text-align: left;
-	padding-top: 7%;
+	padding-top: 9%;
 }
 
-#form form {
+#form div form {
 	display: flex;
 	flex-direction: column;
 	padding-left: 14%;
@@ -497,8 +516,8 @@ body.coachingIntroduction #header #headerContents {
 
 input, select, option {
 	/*background: rgb(217, 238, 227); */
-	background: rgb(234, 243, 242);
-	border: 2px solid white;
+	background: rgb(230, 242, 240);
+	border: 1px solid rgb(84, 84, 84);
 	color: black;
 	font-weight: 400;
 	text-align: left;
@@ -516,9 +535,9 @@ select.challengesList, select.challengesList option {
    background: url(../images/down_arrow.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
    background-position: 97% end;
    background-repeat: no-repeat;
-   background: rgb(234, 243, 242);
+   background: rgb(230, 242, 240);
    /*background: rgb(217, 238, 227);*/
-   border: 2px solid white;
+   border: 1px solid rgb(84, 84, 84);
    /*color: rgb(84, 84, 84);*/
    color: rgb(130, 20, 15);
    /*font-size: inherit;*/
@@ -537,9 +556,11 @@ form #submit {
 	padding: 2.4%;
 	/*background: rgb(190, 215, 200);*/
 	/*background: rgb(130, 20, 15);*/
-	background: rgb(130, 50, 50);
+	/*background: rgb(130, 50, 50);*/
+	background: rgb(84, 84, 84);
 	text-transform: uppercase;
-	border: .25px solid rgb(190, 215, 200);
+	/*border: .25px solid rgb(190, 215, 200);*/
+	border: .25px solid rgb(84, 84, 84);
 	color: white;
 }
 
@@ -551,7 +572,7 @@ input::placeholder {
 
 aside small {
 	/*padding: 2vh 0 0 15vh;*/
-	padding: 2.4% 0 0 16%;
+	padding: 2.4% 0 0 14%;
 	text-align: left; 
 	color: rgb(84, 84, 84);
 }
@@ -559,7 +580,7 @@ aside small {
 
 /* =================== Grid H - FOOTER =================== */
 footer {
-	background: rgb(84,84,84);
+	background: rgb(21, 40 ,54);
 }
 
 .footer {
@@ -636,7 +657,7 @@ footer {
 	font-weight: bold;
 }
 .contact small a:hover {
-	color: #3d7376;
+	color: black;
 }
 
 
@@ -682,6 +703,8 @@ body.application {
 
 /*=============================================================================================*/
 /*         mobile version         */
+
+/*carousel*/
 @media (max-device-width: 1024px) {
   .arrow {
     width: 20%;
@@ -697,3 +720,5 @@ body.application {
 @media screen and (max-width: 780px){
 	
 	}
+
+

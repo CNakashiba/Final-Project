@@ -20,11 +20,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"> 
   <link rel="stylesheet" href="css/style.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-  <!-- parallax -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
-  <script src="js/parallax.min.js"></script>
-  <script src="js/parallax.js"></script>
-  <!--  -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
   <meta charset="utf-8">
   <meta name="description" content="Kompas Small Business Coaching. Description in one sentence here.">
@@ -52,30 +49,28 @@
   	</div>
   </header>
 
-  <section id="intro">
-  	<div class="parallax-window" data-parallax="scroll" data-image-src="images/detroit_unsplash_2000.jpg">parallax</div>
-    <div class="clearOverlay"></div>
-    <!-- <div class="introOverlay"> -->
-      <div class="intro">
-    		<h1>Small Business Coaching</h1><br>
-    		<!-- <hr size="0.5" width="10%" align="center"> -->
-        <div class="introLine"></div>
-    		<p>We are matching emerging small businesses with established business owners for free coaching sessions.</p>
-    	</div>	
+  <section id="intro" class="module parallax parallax-1">
+    <!-- <img id="introImage" src="images/detroit_unsplash_2000.jpg"> -->
+    <div class="clearOverlay container">
     <!-- </div> -->
+      <div class="intro">
+        <h1>Small Business Coaching</h1><br>
+        <div class="introLine"></div>
+        <p>We are matching emerging small businesses with established business owners for free coaching sessions.</p>
+      </div>	
+    </div>
   </section>
 
-  <section id="about">
-  	<div class="about">
-  		<h2>Small Businesses in the U.S.</h2><br>
-      <!-- <hr size="0.5" width="10%" align="center"> -->
+  <section id="about" class="module content">
+  	<div class="about container">
+  		<h2>Small Businesses Are the Foundation of the U.S.</h2><br>
       <div class="aboutLine"></div>      
-  		<img src="images/d3_map.png">
+      <p>Sed tempus lectus ornare facilisis lacinia. Pellentesque eget posuere turpis. Phasellus pellentesque tincidunt urna, molestie ullamcorper ipsum volutpat at. Sed vitae magna elit. Duis sodales gravida ligula non tincidunt. Ut nisl turpis, porta quis dolor vitae, pulvinar vulputate ex. Mauris eu arcu non elit ultricies auctor. Aliquam dapibus, augue et pulvinar viverra, leo nisi viverra nisi, eget vulputate erat tortor a justo.</p>
   	</div>
   </section>
 
-  <section id="facts">
-    <div class="facts">
+  <section id="facts" class="module parallax parallax-2">
+    <div class="facts container">
       <p class="largerP">We believe that small businesses like yours are the foundation of a thriving city. You are the source of job creation and economic development in your community.</h3>
       <div class="factsOverlay">
         <div class="threeColumns">
@@ -101,23 +96,7 @@
     </div>
   </section>
 
-  <section id="coaching">
-    <div class="who">
-      <h2>Who We Want To Coach</h2>
-      <!-- <hr size="0.5" width="10%" align="center"><br> -->
-      <div class="whoLine"></div>
-      <p>
-      Our program is a fit for your if:<br>
-      You  are interested in growing your business and adding more employees.
-      Your business is located in a community where annual family income is $35,000 or less.
-      You are committed to keeping your business in a low-income area.
-      You have five or fewer employees.
-      Your business earns less than $40,000 in annual revenue.
-      </p>
-    </div>
-  </section>
-
-  <section id="coaches">
+  <section id="coaching" class="module content">
     <h2>Meet Some Of The Coaches</h2>
     <!-- <hr size="0.5" width="10%" align="center"> -->
     <div class="coachesLine"></div>    
@@ -145,26 +124,33 @@
     </div>
   </section>
 
-  <aside id="form" id="contactNav">
-    <h2>Sign Up For An Application</h2>
-    <div class="form">
-      <form method="POST">
-        <input required type="text" placeholder="Full Name" name="Name" id="name" class="main">
-        <input required type="email" placeholder="Email" name="Email" id="email" class="main">
-<!--         <input type="text" placeholder="Company Website" name="Company Website" id="companyWebsite" class="main">
-        <input required type="text" placeholder="Challenge" name="Challenge" id="challenge" class="main"> -->
-        <!-- https://codepen.io/ericrasch/pen/zjDBx -->
-<!--         <select name="Challenges" class="challengesList">
-          <option value="Blank" name="Blank">What Challenge Are You Facing?</option>
-          <option value="Strategy" name="Strategy">Business Strategy &amp; Operations</option>
-          <option value="Finance">Financials &amp; Bookkeeping</option>
-          <option value="Human Resources">Human Resources</option>
-          <option value="Lending">Lending</option>
-          <option value="Marketing">Marketing</option>
-        </select> --> 
-        <input type="submit" placeholder="SUBMIT" name="Submit" id="submit">
-      </form>
-      <small class="footnotes">We have a limited number of time slots available and not all businesses that apply will qualify.</small>
+  <section id="students" class="module parallax parallax-3">
+    <div class="who container">
+      <h2>Who We Want To Coach</h2>
+      <!-- <hr size="0.5" width="10%" align="center"><br> -->
+      <div class="whoLine"></div>
+      <p>
+      Our program is a fit for your if:<br>
+      You  are interested in growing your business and adding more employees.
+      Your business is located in a community where annual family income is $35,000 or less.
+      You are committed to keeping your business in a low-income area.
+      You have five or fewer employees.
+      Your business earns less than $40,000 in annual revenue.
+      </p>
+    </div>
+  </section>
+
+  <aside id="form" id="contactNav" class="module content">
+    <div class="container">
+      <h2>Sign Up For An Application</h2>
+      <div class="form">
+        <form method="POST">
+          <input required type="text" placeholder="Full Name" name="Name" id="name" class="main">
+          <input required type="email" placeholder="Email" name="Email" id="email" class="main">
+          <input type="submit" placeholder="SUBMIT" name="Submit" id="submit">
+        </form>
+        <small class="footnotes">We have a limited number of time slots available and not all businesses that apply will qualify.</small>
+      </div>
     </div>
   </aside>
 
