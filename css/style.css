@@ -39,7 +39,7 @@ p {
 	font-weight: 300;
 	text-align: center;
 }
-small, input, label {
+small, input, label, button {
 	font-size: 0.75em;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 300;
@@ -625,7 +625,7 @@ form .main {
 	padding: 2.4%;
 }
 
-input, select, option, #challengesList p {
+input, select, option, #challengesList p, button {
 	background: white;
 	border: 2px solid rgb(224, 233, 232);
 	color: black;
@@ -745,12 +745,16 @@ input[name=challenge]:checked + label::after {
 	border-top: 4px solid rgb(224, 233, 232);
 }
 
-form #submit {
+form #submit, button {
 	padding: 2.4%;
 	background: rgb(84, 84, 84);
 	text-transform: uppercase;
-	border: .25px solid rgb(84, 84, 84);
+	border: 2px solid rgb(224, 233, 232);
 	color: white;
+}
+
+form #submit:hover, button:hover {
+	background: rgb(124, 124, 124);
 }
 
 form input::placeholder, textarea::placeholder, select.challengesList, select.challengesList option {
@@ -758,13 +762,12 @@ form input::placeholder, textarea::placeholder, select.challengesList, select.ch
 	font-weight: 400;
 }
 
-aside small {
-	padding-top: 25%;
+#applicationForm aside small {
+	padding-top: 5%;
 	text-align: left; 
 	color: rgb(84, 84, 84);
 	font-weight: 400;
 }
-
 
 
 #applicationFooter {
