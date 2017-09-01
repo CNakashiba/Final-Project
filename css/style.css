@@ -39,7 +39,7 @@ p {
 	font-weight: 300;
 	text-align: center;
 }
-small, input {
+small, input, label {
 	font-size: 0.75em;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 300;
@@ -621,9 +621,22 @@ body.application {
 	padding: 5% 0 5% 15%;
 }
 
-input, select, option, textarea {
+form .main {
+	padding: 2.4%;
+}
+
+input, select, option, #challengesList p {
 	background: white;
-	border: 1px solid rgb(224, 233, 232);
+	border: 2px solid rgb(224, 233, 232);
+	color: black;
+	font-weight: 400;
+	text-align: left;
+	width: 80%;
+}
+
+textarea {
+	background: white;
+	border: 2px solid rgb(224, 233, 232);
 	color: black;
 	font-weight: 400;
 	text-align: left;
@@ -631,31 +644,105 @@ input, select, option, textarea {
 }
 
 /* RESOURCE: https://codepen.io/ericrasch/pen/zjDBx */
-select.challengesList, select.challengesList option {
+/*select.challengesList, select.challengesList option {
    -webkit-appearance: button;
    -webkit-border-radius: 0;
    -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
    /*-webkit-padding-end: 10vh;*/
    /*-webkit-padding-start: 5vh;*/
-   -webkit-user-select: none;
+/*   -webkit-user-select: none;
    background: url(../images/down_arrow.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
    background-position: 97% end;
    background-repeat: no-repeat;
-   background: white;
+   background: white;*/
    /*background: rgb(217, 238, 227);*/
-   border: 1px solid rgb(224, 233, 232);
+   /*border: 1px solid rgb(224, 233, 232);*/
    /*color: rgb(84, 84, 84);*/
-   color: black;
+   /*color: black;*/
    /*font-size: inherit;*/
    /*overflow: hidden;*/
-   padding: 2.4%;
+/*   padding: 2.4%;
    text-overflow: ellipsis;
    white-space: nowrap;
    width: 80%;
+}*/
+
+
+/*==== RADIO ====*/
+#challengesList p {
+	border: 0;
+	/*border-bottom: 1px solid white;*/
+	/*border-left: 1px solid rgb(224, 233, 232);*/
+	border: none;
+	font-size: 0.75em;
+	font-family: 'Source Sans Pro', sans-serif;
+	text-align: left;
+	color: #bd1414;
+	font-weight: 400;
+	padding: 2%;
 }
 
-form .main {
-	padding: 2.4%;
+.challengesList {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	text-align: center;
+	width: 80%;
+	background: white;
+	border: 0 solid rgb(224, 233, 232);
+	border-top: 0;
+	padding: 2% 1% 2% 2%;
+}
+
+.challengesList div {
+	display: flex;
+	justify-content: center;
+	width: 13%;
+}
+
+.challengesList div label {
+	text-align: center;
+	color: #bd1414;
+	font-weight: 400;
+}
+
+input[name=challenge]{
+  display: none;
+}
+
+input[name=challenge] + label::after{
+  content:"";
+  display: block;
+  width: 1em;
+  height: 1em;
+  background: white;
+  border: 1px solid rgb(84, 84, 84);
+  margin-left: 20px;
+  margin-top: 5px;
+}
+
+input[class=one] + label::after{
+	margin-top: 17px;
+}
+
+input[id=financials] + label::after{
+	margin-left: -40%;
+}
+
+input[class=two] + label::after{
+	margin-left: 40%;
+}
+
+input[name=challenge]:checked + label::after {
+  content: "\2713";
+  background:#bd1414;
+  text-align:center;
+}
+
+/*======*/
+
+#challengeDescription {
+	border-top: 4px solid rgb(224, 233, 232);
 }
 
 form #submit {

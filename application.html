@@ -29,9 +29,9 @@
       </div>
       <nav id="headerNav">
         <ul id="headerLinks">
-          <li class="a"><a href="#about">About</a></li> 
-          <li class="a"><a href="#coaching">Coaching</a></li>
-          <li class="a"><a href="#form">Apply</a></li>
+          <li class="a"><a href="#about"></a></li> 
+          <li class="a"><a href="#coaching"></a></li>
+          <li class="a"><a href="#form"></a></li>
         </ul>
       </nav>
     </div>
@@ -41,26 +41,60 @@
   <aside id="applicationForm" id="contactNav">
     <h2>Small Business Coaching Application Form</h2>
     <div class="form">
-      <form method="POST">
+      <form enctype="multipart/form-data" method="POST">
         <input required type="text" placeholder="Full Name" name="Name" id="name" class="main">
         <input required type="email" placeholder="Email" name="Email" id="email" class="main">
+        <input required type="tel" placeholder="Cellular Number" name="Cellular" id="cellNumber" class="main">
         <input required type="text" placeholder="Company Name" name="Company Name" id="companyName" class="main">
         <input type="text" placeholder="Company Website" name="Company Website" id="companyWebsite" class="main">
         <input type="text" placeholder="Industry" name="Industry" id="industry" class="main">
         <input required type="text" placeholder="Your Role In Your Company" name="Company Role" id="companyRole" class="main">
         <textarea required placeholder="Company Description" name="Company Description" id="companyDescription" class="main" style="width:80%;height:150px;"></textarea>
-        <!-- <input type="text" placeholder="Company Description" name="Company Description" id="companyDescription" class="main"> -->
-        <!-- <input required type="text" placeholder="Challenge" name="Challenge" id="challenge" class="main"> -->
+
         <!-- https://codepen.io/ericrasch/pen/zjDBx -->
-        <select required name="Challenges" class="challengesList">
+<!--         <select required name="Challenges" class="challengesList">
           <option value="Blank" name="Blank">What Challenge Are You Facing?</option>
           <option value="Strategy" name="Strategy">Business Strategy &amp; Operations</option>
           <option value="Finance">Financials &amp; Bookkeeping</option>
           <option value="Human Resources">Human Resources</option>
           <option value="Lending">Lending</option>
           <option value="Marketing">Marketing</option>
-        </select>
+        </select> -->
+        
+        <!-- reference: https://codepen.io/CNakashiba/pen/VzgjOK?editors=1100 -->
+        <div id="challengesList">
+          <p>What challenge are you facing?</p>
+          <div class="challengesList">
+            <div>
+              <input name="challenge" type="radio" id="strategy" class="two">
+              <label for="strategy">Strategy &amp; Operations</label>            
+            </div>
 
+            <div>
+              <input name="challenge" type="radio" id="fiancials" class="two">
+              <label for="financials">Financials &amp; Bookkeeping</label>            
+            </div>  
+
+            <div>
+              <input name="challenge" type="radio" id="hr" class="two">
+              <label for="hr">Human Resources</label>             
+            </div>
+   
+            <div>
+              <input name="challenge" type="radio" id="lending" class="one">
+              <label for="lending">Lending</label>            
+            </div>
+
+            <div>
+              <input name="challenge" type="radio" id="marketing" class="one">
+              <label for="marketing">Marketing</label>
+            </div>
+          </div>
+        </div>
+
+        <textarea required placeholder="Describe Your Business Challenge" name="Challenge Description" id="challengeDescription" class="main" style="width:80%;height:150px;"></textarea>
+
+        <textarea required placeholder="Why Did You Start Your Company" name="Company Why" id="companyWhy" class="main" style="width:80%;height:150px;"></textarea>
 
         <input type="submit" placeholder="SUBMIT" name="Submit" id="submit">
 
