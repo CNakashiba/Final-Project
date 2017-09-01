@@ -20,8 +20,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"> 
   <link rel="stylesheet" href="css/style.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script data-cfasync="false" type="text/javascript"
+  src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
   <script type="text/javascript" src="js/script.js"></script>
   <meta charset="utf-8">
   <meta name="description" content="Kompas Small Business Coaching. Description in one sentence here.">
@@ -43,7 +44,7 @@
   			<ul id="headerLinks">
           <li class="a"><a href="#about">About</a></li> 
           <li class="a"><a href="#coaching">Coaching</a></li>
-  				<li class="a"><a href="#form">Apply</a></li>
+  				<li class="a"><a href="#apply">Apply</a></li>
   			</ul>
   		</nav>
   	</div>
@@ -126,7 +127,7 @@
 
   <section id="students" class="module parallax parallax-3">
     <div class="who container">
-      <h2>Who We Want To Coach</h2>
+      <h2>Who We Want To Coach</h2> 
       <!-- <hr size="0.5" width="10%" align="center"><br> -->
       <div class="whoLine"></div>
       <p>
@@ -140,17 +141,17 @@
     </div>
   </section>
 
-  <aside id="form" id="contactNav" class="module content">
+  <aside id="apply" id="contactNav" class="module content">
     <div class="container">
-      <h2>Sign Up For An Application</h2>
-      <div class="form">
-        <form method="POST">
+      <h2>Sign Up For An Application <a href="application.html" target="_blank">Here</a></h2>
+<!--       <div class="form">
+        <form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbwojKOuJXTa0gHKIQfT_MwErSWf9fKarmRi8O-gbhUA32SEYzM/exec">
           <input required type="text" placeholder="Full Name" name="Name" id="name" class="main">
           <input required type="email" placeholder="Email" name="Email" id="email" class="main">
           <input type="submit" placeholder="SUBMIT" name="Submit" id="submit">
         </form>
         <small class="footnotes">We have a limited number of time slots available and not all businesses that apply will qualify.</small>
-      </div>
+      </div> -->
     </div>
   </aside>
 

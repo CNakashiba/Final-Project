@@ -1,10 +1,10 @@
 $(document).ready(function(){		
-
+ 
 	// parallax
-	$('#intro').scroll(function(){
-    	s = $('#intro').scrollTop();
-    	$('#introImage img').css('-webkit-transform', 'translateY(' + (s/3) + 'px)');
-  	});
+	// $('#intro').scroll(function(){
+ //    	s = $('#intro').scrollTop();
+ //    	$('#introImage img').css('-webkit-transform', 'translateY(' + (s/3) + 'px)');
+ //  	});
 
 // scrolling from one part of the page to another
 // ===============================================

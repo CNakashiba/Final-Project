@@ -9,11 +9,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"> 
   <link rel="stylesheet" href="css/style.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-  <!-- parallax -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
-  <script src="js/parallax.min.js"></script>
-  <script src="js/parallax.js"></script>
-  <!--  -->
   <script type="text/javascript" src="js/script.js"></script>
   <meta charset="utf-8">
   <meta name="description" content="Kompas Small Business Coaching. Description in one sentence here.">
@@ -21,33 +16,43 @@
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-</head>
 
-<body class="application">
-  <header id="applicationHeader">
-  	<div id="headerContents">
+</head>
+<body>
+<!-- ================================ HEADER ================================  -->
+  <header id="header" class="application">
+    <div id="headerContents" id="applicationHeader">
       <div class="logo">
         <a href="http://www.kompasstrategy.com" alt="Kompas Strategy Website Link">
         <img class="headerLogo" src="images/kLogo.svg" alt="Kompas Strategy Logo">
         </a>
       </div>
-  	</div>
+      <nav id="headerNav">
+        <ul id="headerLinks">
+          <li class="a"><a href="#about">About</a></li> 
+          <li class="a"><a href="#coaching">Coaching</a></li>
+          <li class="a"><a href="#form">Apply</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
+<!-- ================================ FORM ================================  -->
   <aside id="applicationForm" id="contactNav">
     <h2>Small Business Coaching Application Form</h2>
     <div class="form">
       <form method="POST">
         <input required type="text" placeholder="Full Name" name="Name" id="name" class="main">
         <input required type="email" placeholder="Email" name="Email" id="email" class="main">
-        <input type="text" placeholder="Company Name" name="Company Name" id="companyName" class="main">
+        <input required type="text" placeholder="Company Name" name="Company Name" id="companyName" class="main">
         <input type="text" placeholder="Company Website" name="Company Website" id="companyWebsite" class="main">
         <input type="text" placeholder="Industry" name="Industry" id="industry" class="main">
-        <input type="text" placeholder="Your Role In Your Company" name="Company Role" id="companyRole" class="main">
-        <input type="text" placeholder="Company Description" name="Company Description" id="companyDescription" class="main">
+        <input required type="text" placeholder="Your Role In Your Company" name="Company Role" id="companyRole" class="main">
+        <textarea required placeholder="Company Description" name="Company Description" id="companyDescription" class="main" style="width:80%;height:150px;"></textarea>
+        <!-- <input type="text" placeholder="Company Description" name="Company Description" id="companyDescription" class="main"> -->
         <!-- <input required type="text" placeholder="Challenge" name="Challenge" id="challenge" class="main"> -->
         <!-- https://codepen.io/ericrasch/pen/zjDBx -->
-        <select name="Challenges" class="challengesList">
+        <select required name="Challenges" class="challengesList">
           <option value="Blank" name="Blank">What Challenge Are You Facing?</option>
           <option value="Strategy" name="Strategy">Business Strategy &amp; Operations</option>
           <option value="Finance">Financials &amp; Bookkeeping</option>
@@ -58,11 +63,33 @@
 
 
         <input type="submit" placeholder="SUBMIT" name="Submit" id="submit">
+
+        <button><i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+
       </form>
       <small class="footnotes">We have a limited number of time slots available and not all businesses that apply will qualify.</small>
     </div>
   </aside>
 
+
+<!-- ================================ THANK YOU PAGE ================================  -->
+<!-- RESOURCE: https://github.com/dwyl/html-form-send-email-via-google-script-without-server -->
+
+    <!-- Customise the Thankyou Message People See when they submit the form: -->
+  <div style="display:none;" id="thankyou_message">
+    <h2><em>Thanks</em> for contacting us!
+      We will get back to you soon!</h2>
+  </div>
+
+  <!-- Submit the Form to Google Using "AJAX" -->
+  <script data-cfasync="false" type="text/javascript"
+  src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+  <!-- <script data-cfasync="false" type="text/javascript"
+  src="/form-submission-handler.js"></script> -->
+
+
+
+<!-- ================================ FOOTER ================================  -->
   <footer id="footer applicationFooter">
     <div class="footer">
       <div class="headerArrow">

@@ -20,11 +20,11 @@ h1{
 	font-weight: 400;	
 	text-align: center;
 }
-h2 {
+h2{
 	font-size: 3em;
 	font-family: 'Cormorant Garamond', serif;
 	font-weight: 300;
-	color: #3d7376;
+	color: rgb(230, 242, 240);
 	text-align: center;
 }
 h4 {
@@ -49,29 +49,29 @@ small.footnotes {
 	font-weight: 300i;
 	font-style: italic;
 }
-a {
+.a a, .b a, .headerArrow a {
 	font-size: 1em;
 	font-family: 'Source Sans Pro', sans-serif;
 	font-weight: 400;	
 	text-decoration: none;
 	color: rgb(84, 84, 84);
 }
-#headerLinks a:hover, #headerLinks a:active {
+.a a:active {
 	color: rgb(60, 116, 118);
 }
 
-#headerLinks ul a:visited {
+.a a:visited {
 	/*color: rgb(130, 19, 16);*/
-	color: red;
+	color: #800020;
 }
-.a a.active {
+.a a.active, .a a:hover {
 	border-bottom:1px solid black;
 	padding: 5px;
 	color: rgb(130, 19, 16);
-	color: red;
+	color: #bd1414;
 }
 
-.b a.active, .headerArrow a.active {
+.b a.active, .headerArrow a.active, .b a:hover, .headerArrow a:hover {
 	border-bottom:1px solid white;
 	padding: 5px;
 	color: white;
@@ -81,14 +81,14 @@ a {
 /* reference: http://callmenick.com/post/simple-parallax-scrolling-effect */
 
 section.module.parallax {
-  height: 90vh;
+  height: 100vh;
   background-position: 50% 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
 
-section.module.parallax-1 {
+section.module.parallax-1 { 
   background-image: url("../images/detroit_unsplash_2000.jpg");
 }
 section.module.parallax-2 {
@@ -99,11 +99,12 @@ section.module.parallax-3 {
   background-image: url("../images/belle_isle_detroit_unsplash.jpg");
 }
 
+
 /* ========================= BODY ========================= */
 body.coachingIntroduction { 
   display: grid;
   /*min-height: 100vh;*/
-  grid-template-rows: minmax(10vh, auto) minmax(90vh, auto) minmax(90vh, auto) minmax(90vh, auto) minmax(90vh, auto) minmax(90vh, auto) minmax(50vh, auto) minmax(22vh, auto);
+  grid-template-rows: minmax(10vh, auto) minmax(90vh, auto) minmax(100vh, auto) minmax(100vh, auto) minmax(100vh, auto) minmax(100vh, auto) minmax(40vh, auto) minmax(20vh, auto);
   grid-template-areas: "a"
                        "b"
                        "c"
@@ -116,12 +117,12 @@ body.coachingIntroduction {
 
 
 /* =================== Grid A - HEADER =================== */
-body.coachingIntroduction #header {
+/*body.coachingIntroduction */#header {
 	height: 4.4em;
 	grid-area: a;	
 }
 
-body.coachingIntroduction #header #headerContents {
+/*body.coachingIntroduction */#header #headerContents {
 	/*grid-area: a;*/
 	display: flex;
 	width: 100%;
@@ -346,7 +347,7 @@ body.coachingIntroduction #header #headerContents {
 	flex-direction: column;
 	background: rgb(175, 175, 175);
 	color: white;
-	padding-top: 8vh;
+	padding-top: 15vh;
 }
 
 #coaching h2 {
@@ -484,97 +485,25 @@ body.coachingIntroduction #header #headerContents {
 
 
 /* =================== Grid G - FORM =================== */
-#form div {
+#apply {
 	grid-area: g;
-	display: flex;
 	background: rgb(230, 242, 240);
 	width: 100%;
-	color: black;
+	text-align: center;
 }
 
-#form div h2 {
+#apply div h2 {
 	color: rgb(84, 84, 84);
-	/*color: rgb(130, 20, 15);*/
-	width: 40%;
-	line-height: 110%;
-	padding: 10% 0 0 8%;
+	padding: 10%;
 }
 
-.form {
-	display: flex;
-	flex: 1;
-	flex-direction: column;
-	text-align: left;
-	padding-top: 9%;
-}
-
-#form div form {
-	display: flex;
-	flex-direction: column;
-	padding-left: 14%;
-}
-
-input, select, option {
-	/*background: rgb(217, 238, 227); */
-	background: rgb(230, 242, 240);
-	border: 1px solid rgb(84, 84, 84);
-	color: black;
-	font-weight: 400;
-	text-align: left;
-	width: 90%;
-}
-
-/* RESOURCE: https://codepen.io/ericrasch/pen/zjDBx */
-select.challengesList, select.challengesList option {
-   -webkit-appearance: button;
-   -webkit-border-radius: 0;
-   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
-   /*-webkit-padding-end: 10vh;*/
-   /*-webkit-padding-start: 5vh;*/
-   -webkit-user-select: none;
-   background: url(../images/down_arrow.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
-   background-position: 97% end;
-   background-repeat: no-repeat;
-   background: rgb(230, 242, 240);
-   /*background: rgb(217, 238, 227);*/
-   border: 1px solid rgb(84, 84, 84);
-   /*color: rgb(84, 84, 84);*/
-   color: rgb(130, 20, 15);
-   /*font-size: inherit;*/
-   /*overflow: hidden;*/
-   padding: 2.4%;
-   text-overflow: ellipsis;
-   white-space: nowrap;
-   width: 90%;
-}
-
-form .main {
-	padding: 2.4%;
-}
-
-form #submit {
-	padding: 2.4%;
-	/*background: rgb(190, 215, 200);*/
-	/*background: rgb(130, 20, 15);*/
-	/*background: rgb(130, 50, 50);*/
-	background: rgb(84, 84, 84);
-	text-transform: uppercase;
-	/*border: .25px solid rgb(190, 215, 200);*/
-	border: .25px solid rgb(84, 84, 84);
-	color: white;
-}
-
-input::placeholder {
+#apply div h2 a {
+	/*font-size: 3em;*/
+	font-family: 'Cormorant Garamond', serif: 
+	font-weight: 300;
+	text-decoration: none;
 	/*color: rgb(84, 84, 84);*/
-	color: rgb(130, 20, 15);
-	font-weight: 400;
-}
-
-aside small {
-	/*padding: 2vh 0 0 15vh;*/
-	padding: 2.4% 0 0 14%;
-	text-align: left; 
-	color: rgb(84, 84, 84);
+	color: #bd1414;
 }
 
 
@@ -653,11 +582,12 @@ footer {
 }
 
 .contact small a {
+	text-decoration: none;
 	color: white;
 	font-weight: bold;
 }
 .contact small a:hover {
-	color: black;
+	color: rgb(150, 150, 150);
 }
 
 
@@ -665,37 +595,90 @@ footer {
 /*===========================================================*/
 body.application { 
   display: grid;
-  /*min-height: 100vh;*/
-  grid-template-rows: minmax(10vh, auto) minmax(90vh, auto) minmax(22vh, auto);
+  grid-template-rows: minmax(10vh, auto) minmax(100vh, auto) minmax(22vh, auto);
   grid-template-areas: "a"
                        "b"
                        "c"
 }
 
-#applicationHeader {
-	grid-area: a;
-}
-
 #applicationForm {
 	grid-area: b;
+	background: rgb(224, 233, 232);
+	display: flex;
 	width: 100%;
-	display: flex;	
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
-	background: rgb(234, 243, 242);
-	/*padding: 5% 5% 15% 5%;*/
 }
 
-#applicationForm h2, #applicationForm small {
-	/*color: rgb(84, 84, 84);*/
-	color: rgb(130, 20, 15);	
+#applicationForm h2{
+	flex: 1;
+	padding: 5% 0 0 0;
+	color: rgb(84, 84, 84);
 }
 
-#applicationForm {
+#applicationForm .form {
+	flex: 1;
+	padding: 5% 0 5% 15%;
+}
+
+input, select, option, textarea {
+	background: white;
+	border: 1px solid rgb(224, 233, 232);
+	color: black;
+	font-weight: 400;
+	text-align: left;
+	width: 80%;
+}
+
+/* RESOURCE: https://codepen.io/ericrasch/pen/zjDBx */
+select.challengesList, select.challengesList option {
+   -webkit-appearance: button;
+   -webkit-border-radius: 0;
+   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+   /*-webkit-padding-end: 10vh;*/
+   /*-webkit-padding-start: 5vh;*/
+   -webkit-user-select: none;
+   background: url(../images/down_arrow.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+   background-position: 97% end;
+   background-repeat: no-repeat;
+   background: white;
+   /*background: rgb(217, 238, 227);*/
+   border: 1px solid rgb(224, 233, 232);
+   /*color: rgb(84, 84, 84);*/
+   color: black;
+   /*font-size: inherit;*/
+   /*overflow: hidden;*/
+   padding: 2.4%;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   width: 80%;
+}
+
+form .main {
+	padding: 2.4%;
+}
+
+form #submit {
+	padding: 2.4%;
+	background: rgb(84, 84, 84);
+	text-transform: uppercase;
+	border: .25px solid rgb(84, 84, 84);
 	color: white;
-	/*align-items: center;*/
 }
+
+form input::placeholder, textarea::placeholder, select.challengesList, select.challengesList option {
+	color: #bd1414;
+	font-weight: 400;
+}
+
+aside small {
+	padding-top: 25%;
+	text-align: left; 
+	color: rgb(84, 84, 84);
+	font-weight: 400;
+}
+
+
 
 #applicationFooter {
 	grid-area: c;
