@@ -17,7 +17,7 @@ body {
 h1{
 	font-size: 3.75em;
 	font-family: 'Cormorant Garamond', serif;
-	font-weight: 400;	
+	font-weight: 300;	
 	text-align: center;
 }
 h2{
@@ -614,6 +614,7 @@ body.application {
 	flex: 1;
 	padding: 5% 0 0 0;
 	color: rgb(84, 84, 84);
+	font-weight: 400;
 }
 
 #applicationForm .form {
@@ -629,7 +630,7 @@ input, select, option, #challengesList p, button {
 	background: white;
 	border: 2px solid rgb(224, 233, 232);
 	color: black;
-	font-weight: 400;
+	font-weight: 300;
 	text-align: left;
 	width: 80%;
 }
@@ -725,8 +726,8 @@ input[class=one] + label::after{
 	margin-top: 17px;
 }
 
-input[id=financials] + label::after{
-	margin-left: -40%;
+input[id=hr] + label::after{
+	margin-left: 40%;
 }
 
 input[class=two] + label::after{
