@@ -1,5 +1,5 @@
 /* 
-h1 = 60px, serif
+h1 = 60px, serif 
 h2 = 48px, serif
 h3 = 30px, sans serif
 h4 = 24px, serif 
@@ -122,8 +122,7 @@ body.coachingIntroduction {
 	grid-area: a;	
 }
 
-/*body.coachingIntroduction */#header #headerContents {
-	/*grid-area: a;*/
+#header #headerContents {
 	display: flex;
 	width: 100%;
 	align-items: center;
@@ -176,10 +175,7 @@ body.coachingIntroduction {
 /* =================== Grid B - INTRO =================== */
 #intro {
 	grid-area: b;	
-	/*background: url('../images/detroit_unsplash_2000.jpg') no-repeat top center #fff;*/
-	/*background-size: cover;*/
-	width: 100%;
-	height: 100vh;
+	background-size: cover;
 	position: relative;
 	/*min-height:500px;*/
 	/*min-height: 90vh;*/
@@ -198,7 +194,7 @@ body.coachingIntroduction {
 	width: 100%;
 	top: 0;
 	left: 0;
-	background: rgba(255, 255, 255, .7);
+	background: rgba(255, 255, 255, .6);
 	position: relative;
 	top: 22%;
 }
@@ -213,14 +209,13 @@ body.coachingIntroduction {
 .intro h1 {
 	width: 100%;
 	position: absolute;
-	top: 35%;
-	padding-top: 10%;
+	padding-top: 15%;
 }
 
 .introLine {
 	position: absolute;
 	left: 45%;
-	height: 46%;
+	height: 150px;
 	width: 10%;
 	border-style: none none solid none;
 	border-width: 1px;
@@ -230,9 +225,8 @@ body.coachingIntroduction {
 .intro p {
 	width: 100%;
 	position: absolute;
-	margin-top: 47vh;
+	padding-top: 17%;
 	font-weight: 400;
-	/*left: 35vh;	*/
 }
 
 
@@ -241,19 +235,25 @@ body.coachingIntroduction {
 	grid-area: c;
 	width: 100%;
 	align-content: center;
-	background: rgb(230, 242, 240);
+	/*background: rgb(230, 242, 240);*/
+	background-color: rgba(230,242,240,.8);
 	/*background: rgba(234, 243, 242, .7);*/
 }
 
 .about h2 {
 	padding-top: 10%;
 	color: rgb(84, 84, 84);
+	max-width: 700px;
+}
+
+.about p {
+	max-width: 800px;
 }
 
 .aboutLine {
 	margin-left: 45%;
 	height: 3vh;
-	width: 20vh;
+	max-width: 40vw;
 	border-style: none none solid none;
 	border-width: 1px;
 	border-color: black;
@@ -268,8 +268,8 @@ body.coachingIntroduction {
 #facts {
 	grid-area: d;
 	/*background: url("../images/lake michigan_unsplash_cut.jpg");*/
-	/*background-size: cover;*/
-	width: 100%;
+	background-size: cover;
+	/*width: 100%;*/
 	border: none;
 	/*min-height:500px;*/
 }
@@ -457,8 +457,7 @@ body.coachingIntroduction {
 /* =================== Grid F - STUDENTS =================== */
 #students {
 	grid-area: f;
-	/*background: url("../images/belle_isle_detroit_unsplash_crop_2000px.jpg");*/
-	/*background-size: cover;*/
+	background-size: cover;
 	color: white;
 	padding: 19vh 0;
 	/*min-height:500px;		*/
@@ -780,12 +779,18 @@ form input::placeholder, textarea::placeholder, select.challengesList, select.ch
 
 /*carousel*/
 @media (max-device-width: 1024px) {
+  body {
+  	background: blue;
+  }
   .arrow {
     width: 20%;
   }
 }
 
 @media (max-width: 768px) {
+  body {
+  	background: red;
+  }
   .arrow {
     width: 10%;
   }

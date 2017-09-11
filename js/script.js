@@ -96,15 +96,10 @@ $(document).ready(function(){
 /////////////////////////////
 
 	  /* TO ACTIVATE THE LINKS */
-	  $("#challenges a").click(function(){
-	      var no = $(this).parent().index();
-	      goToSlide(no + 1)
-	  });
-	  
-	  function goToSlide(no){
-	   
-	   };
-	  
+	  // $("#challenges a").click(function(){
+	  //     var no = $(this).parent().index();
+	  //     goToSlide(no + 1)
+	  // });	  
 
 	  // STEP 1
 	  //Build out function goToSlide(no) so that the following function invocations get you what you want
@@ -113,24 +108,25 @@ $(document).ready(function(){
 	  // goToSlide("slide2");
 	  // goToSlide("slide3");
 	  // goToSlide("slide4");
-	  goToSlide("slide5");
+	  // goToSlide("slide5");
 	  
-	  function goToSlide(no){
+	  // function goToSlide(no){
+	  // }
 	  	//count the number of slides
 	  	// get the total width of slides in front of the one you want
 	  	//
-		event.preventDefault();	  	
-		window.clearInterval(interval);
-	    var $currentSlide = $('#carousel').find('no');
-	    var width = $currentSlide.width();
+		// event.preventDefault();	  	
+		// window.clearInterval(interval);
+	 //    var $currentSlide = $('#carousel').find('no');
+	 //    var width = $currentSlide.width();
 
-	    $currentSlide.animate({marginLeft: -width}, 1000, function(){
-	      var $lastSlide = $('#carousel').find('div:last')
-	      $lastSlide.after($currentSlide);
-	      $currentSlide.css({marginLeft: 0})
-	      interval = window.setInterval(rotateSlides, 5000);
-	  	});  
-	  }
+	   //  $currentSlide.animate({marginLeft: -width}, 1000, function(){
+	   //    var $lastSlide = $('#carousel').find('div:last')
+	   //    $lastSlide.after($currentSlide);
+	   //    $currentSlide.css({marginLeft: 0})
+	   //    interval = window.setInterval(rotateSlides, 5000);
+	  	// });  
+	  
 
 	  // STEP 2
 	   // be able to click on a link , and know which link (in terms of its order) that you clicked on
