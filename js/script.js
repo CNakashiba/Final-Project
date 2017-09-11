@@ -8,7 +8,7 @@ $(document).ready(function(){
 
 // scrolling from one part of the page to another
 // ===============================================
-	$('a').on('click', function (e){
+	$('.a').on('click', function (e){
 		// remove  "active" class from all links, using removeClass()
 		e.preventDefault();
 		var target = $(this)[0]['hash']

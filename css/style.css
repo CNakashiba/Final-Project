@@ -215,7 +215,7 @@ body.coachingIntroduction {
 .introLine {
 	position: absolute;
 	left: 45%;
-	height: 150px;
+	height: 140px;
 	width: 10%;
 	border-style: none none solid none;
 	border-width: 1px;
@@ -231,13 +231,16 @@ body.coachingIntroduction {
 
 
 /* =================== Grid C - D3 =================== */
-#about {
+.about {
 	grid-area: c;
 	width: 100%;
-	align-content: center;
-	/*background: rgb(230, 242, 240);*/
-	background-color: rgba(230,242,240,.8);
-	/*background: rgba(234, 243, 242, .7);*/
+	height: 100%;
+/*	align-content: center;
+*/	background-color: rgba(230,242,240,.8);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 17vh 0 0 0;
 }
 
 .about h2 {
@@ -251,12 +254,15 @@ body.coachingIntroduction {
 }
 
 .aboutLine {
-	margin-left: 45%;
 	height: 3vh;
-	max-width: 40vw;
+	width: 10%;
 	border-style: none none solid none;
 	border-width: 1px;
 	border-color: black;
+}
+
+.about p {
+	padding-top: 25px;
 }
 
 .about img {
@@ -298,7 +304,7 @@ body.coachingIntroduction {
 	top: 0;
 	left: 0;
 	background-color: rgba(21, 40, 54, .7);
-	padding-bottom: 10vh;
+	padding-bottom: 12vh;
 	display: flex;
 	flex-direction: column;
 }
@@ -437,7 +443,7 @@ body.coachingIntroduction {
 	background-image: url('../images/p_Mark Placeholder.svg');
 }
 #slide2 {
-	background: gray;
+	background: white;
 	/*background-image: url('../images/p_Greg Placeholder.svg');*/
 }
 #slide3 {
