@@ -8,7 +8,7 @@ $(document).ready(function(){
 
 // scrolling from one part of the page to another
 // ===============================================
-	$('.a').on('click', function (e){
+	$('.x').on('click', function (e){
 		// remove  "active" class from all links, using removeClass()
 		e.preventDefault();
 		var target = $(this)[0]['hash']
@@ -21,27 +21,24 @@ $(document).ready(function(){
 			window.location.hash = target;
 		}); 
 
-		// nav headings are underlined when in that section		
-		// $(this).attr('class', 'active');
-
-		$(this).click(underLine); 	
-		function underLine(){
-			event.preventDefault();
-			blackout();
-			$(this).attr('class', 'active');
-		}
-		function blackout(){
-			$('a').attr('class', 'a');
-		}
+		// $(this).click(underLine); 	
+		// function underLine(){
+		// 	event.preventDefault();
+		// 	blackout();
+		// 	$(this).attr('class', 'active');
+		// }
+		// function blackout(){
+		// 	$('.x').attr('class', 'a');
+		// }
 
 	});
 
 // ==========================================================================
 	//slideshow carousel
-	var pauseInterval = false;
+	var pauseInterval = true;
 	
 	// set an interval for the slide to run on
-	var interval = window.setInterval(rotateSlides, 5000)
+	var interval = window.setInterval(rotateSlides, 50000000)
 	// duration till slide changes (5 sec)
   
   	function rotateSlides() {
