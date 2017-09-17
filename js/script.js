@@ -35,10 +35,10 @@ $(document).ready(function(){
 
 // ==========================================================================
 	//slideshow carousel
-	var pauseInterval = true;
+	var pauseInterval = false;
 	
 	// set an interval for the slide to run on
-	var interval = window.setInterval(rotateSlides, 50000000)
+	var interval = window.setInterval(rotateSlides, 5000)
 	// duration till slide changes (5 sec)
   
   	function rotateSlides() {
