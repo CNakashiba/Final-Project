@@ -782,9 +782,20 @@ form input::placeholder, textarea::placeholder, select.challengesList, select.ch
 	font-weight: 400;
 }
 
-
 #applicationFooter {
 	grid-area: c;
+}
+
+#thankyou_message {
+	height: 50vh;
+	width: 100vw;
+	/*background: rgb(224, 233, 232);*/
+	background: white;
+}
+
+#thankyou_message h2 {
+	padding: 8%;
+	color: rgb(84, 84, 84);
 }
 
 /*=============================================================================================*/
