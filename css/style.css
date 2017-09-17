@@ -406,26 +406,6 @@ body.coachingIntroduction {
 	position: relative;
 }
 
-.slide-image {
-	width: 90vw;
-	height: 50vh;
-	background-position: center;
-	background-size: cover;
-	display: inline-block;
-	/*background-color:green!important;*/
-}
-
-.slide {
-	display: flex;
-	flex-direction: row;
-}
-
-.pText {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
 #slide1 {
 	background: red;
 }
@@ -441,7 +421,6 @@ body.coachingIntroduction {
 #slide5 {
 	background: purple;
 }
-
 .arrow {
 	width: 5%;
 	position: absolute;
@@ -449,13 +428,32 @@ body.coachingIntroduction {
 	transform: translate(-50%);
 	cursor: pointer;
 }
-
 #right-arrow {
   right: 5px;
 }
-
 #left-arrow {
   left: 50px;
+}
+
+.slide-image {
+	width: 90vw;
+	height: 50vh;
+	background-position: center;
+	background-size: cover;
+	display: inline-block;
+}
+
+.slide {
+	width: 90vw;
+	height: 50vh;
+	display: flex;
+	flex-direction: row;
+}
+
+.pText {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .pText h4 {
